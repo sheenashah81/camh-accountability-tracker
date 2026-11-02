@@ -1,0 +1,23 @@
+uuid: f851ebbd-a0df-411d-a85d-05f0ce925f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.document
+  module:
+    - node
+id: node_document
+label: Document
+type: 'canonical_entities:node'
+pattern: '/documents/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      document: document
+selection_logic: and
+weight: 0
+relationships: {  }

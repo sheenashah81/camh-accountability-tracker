@@ -1,0 +1,19 @@
+uuid: 4115117e-4e96-465e-acee-0c11a9d98ba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iso3
+    - node.type.country
+id: node.country.field_iso3
+field_name: field_iso3
+entity_type: node
+bundle: country
+label: 'ISO 3166-1 alpha-3 code'
+description: 'Three uppercase letters, for example KEN. Must be unique.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

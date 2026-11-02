@@ -1,0 +1,24 @@
+uuid: bef305cb-2a3a-48ff-9886-a8730811b5c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.country
+    - node.type.document
+id: node.document.field_country
+field_name: field_country
+entity_type: node
+bundle: document
+label: Country
+description: 'Leave blank for global documents.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      country: country
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 86b1742d-ddda-4327-884f-2a67ba8ebe49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age_group
+    - node.type.indicator
+id: node.indicator.field_age_group
+field_name: field_age_group
+entity_type: node
+bundle: indicator
+label: 'Age group'
+description: 'For example 10 to 19 years.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: daa5e915-b8f8-4413-9855-08727cb2aa8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.country
+  module:
+    - node
+id: node_country
+label: Country
+type: 'canonical_entities:node'
+pattern: '/countries/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      country: country
+selection_logic: and
+weight: 0
+relationships: {  }

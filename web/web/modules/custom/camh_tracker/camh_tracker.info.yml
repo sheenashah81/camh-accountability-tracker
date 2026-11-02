@@ -1,0 +1,8 @@
+name: 'CAMH Tracker rules'
+type: module
+description: 'Validation rules from the data dictionary (uniqueness, same-country institution, required fields before review, provenance, dates, contributor country) and the rule that a published progress update sets the commitment status.'
+package: 'CAMH Tracker'
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:content_moderation

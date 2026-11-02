@@ -1,0 +1,24 @@
+uuid: 3c1316ed-5327-4306-8fdd-e982ff6990b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.country
+    - node.type.indicator_value
+id: node.indicator_value.field_country
+field_name: field_country
+entity_type: node
+bundle: indicator_value
+label: Country
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      country: country
+field_type: entity_reference

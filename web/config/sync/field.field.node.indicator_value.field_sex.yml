@@ -1,0 +1,21 @@
+uuid: f8d081ab-8abf-4ca0-9098-1d421c27fdae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sex
+    - node.type.indicator_value
+  module:
+    - options
+id: node.indicator_value.field_sex
+field_name: field_sex
+entity_type: node
+bundle: indicator_value
+label: Sex
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

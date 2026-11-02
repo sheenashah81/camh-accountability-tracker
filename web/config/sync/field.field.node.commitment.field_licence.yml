@@ -1,0 +1,24 @@
+uuid: 65df3bef-87d8-4ef6-a547-897d665c1800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_licence
+    - node.type.commitment
+    - taxonomy.vocabulary.licence
+id: node.commitment.field_licence
+field_name: field_licence
+entity_type: node
+bundle: commitment
+label: Licence
+description: 'A record marked Not yet checked cannot be published.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licence: licence
+field_type: entity_reference

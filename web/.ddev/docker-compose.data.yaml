@@ -1,0 +1,8 @@
+# Makes the repository's data/ and tests/ folders readable inside the web
+# container (at /var/www/data and /var/www/tests), so build, import and test
+# scripts can read the cited CSV files and the shared tests.
+services:
+  web:
+    volumes:
+      - ../../data:/var/www/data:ro
+      - ../../tests:/var/www/tests:ro

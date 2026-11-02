@@ -1,0 +1,18 @@
+uuid: 16b3058c-0640-4288-b84b-bfae4a47658d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camh_theme
+id: camh_theme_page_title
+theme: camh_theme
+region: content
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: ''
+  provider: system
+visibility: {  }

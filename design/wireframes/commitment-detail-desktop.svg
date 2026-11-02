@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1416" viewBox="0 0 1280 1416">
+<rect x="0" y="0" width="1280" height="1416" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1"/>
+<rect x="0" y="0" width="1280" height="64" rx="0" fill="#F7F8FA" stroke="none" stroke-width="1"/>
+<text x="90" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="start">Site name</text>
+<text x="640" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Home</text>
+<text x="710" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Commitments</text>
+<text x="860" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Countries</text>
+<text x="950" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Data</text>
+<text x="1050" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">English</text>
+<text x="1130" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Spanish</text>
+<rect x="0" y="64" width="1280" height="4" rx="0" fill="#1CABE2" stroke="none" stroke-width="1"/>
+<text x="90" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Home</text>
+<line x1="90" y1="103" x2="122" y2="103" stroke="#0B6E99" stroke-width="1"/>
+<text x="90" y="150" font-family="Noto Sans, Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitment title (H1): what the government committed to,</text>
+<text x="90" y="192" font-family="Noto Sans, Arial, sans-serif" font-size="32" font-weight="700" fill="#1A1A1A" text-anchor="start">country and plan, on up to two lines</text>
+<rect x="90" y="214" width="1100" height="40" rx="0" fill="#FFF4E5" stroke="none" stroke-width="1"/>
+<rect x="90" y="214" width="4" height="40" rx="0" fill="#B35C00" stroke="none" stroke-width="1"/>
+<text x="112" y="240" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Notice area: illustrative-data or pending-review notices appear here</text>
+<text x="90" y="290" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Country:</text>
+<text x="280" y="290" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Linked value</text>
+<line x1="280" y1="293" x2="376" y2="293" stroke="#0B6E99" stroke-width="1"/>
+<text x="90" y="320" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Institution:</text>
+<text x="280" y="320" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Linked value</text>
+<line x1="280" y1="323" x2="376" y2="323" stroke="#0B6E99" stroke-width="1"/>
+<text x="90" y="350" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitment type:</text>
+<text x="280" y="350" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="90" y="380" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Theme:</text>
+<text x="280" y="380" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="90" y="410" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Status:</text>
+<rect x="280" y="390" width="110" height="28" rx="14" fill="#FFFFFF" stroke="#1B7F3B" stroke-width="2"/>
+<rect x="290" y="398" width="12" height="12" rx="6" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="310" y="409" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="90" y="440" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Status last updated on:</text>
+<text x="280" y="440" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="90" y="470" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Date made or adopted:</text>
+<text x="280" y="470" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="90" y="500" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Target date:</text>
+<text x="280" y="500" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<rect x="90" y="524" width="1100" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="90" y="552" width="1100" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="90" y="580" width="1100" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="90" y="608" width="640" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<text x="90" y="666" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Progress updates</text>
+<text x="90" y="694" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Published progress updates, newest first</text>
+<rect x="90" y="708" width="1100" height="40" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="102" y="734" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Date</text>
+<text x="245" y="734" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="377" y="734" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Summary</text>
+<text x="982" y="734" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Source</text>
+<text x="102" y="778" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Date</text>
+<rect x="245" y="760" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#1B7F3B" stroke-width="2"/>
+<rect x="255" y="768" width="12" height="12" rx="6" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="275" y="779" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<rect x="377" y="766" width="560" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="377" y="786" width="560" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="377" y="806" width="380" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<text x="982" y="778" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#0B6E99" text-anchor="start">Evidence (source) ↗</text>
+<line x1="982" y1="781" x2="1115" y2="781" stroke="#0B6E99" stroke-width="1"/>
+<line x1="90" y1="838" x2="1190" y2="838" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="882" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Milestones and timeline</text>
+<text x="90" y="910" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Milestones in date order</text>
+<rect x="90" y="924" width="1100" height="40" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="102" y="950" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Milestone</text>
+<text x="608" y="950" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Due</text>
+<text x="806" y="950" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="1004" y="950" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Completed on</text>
+<rect x="102" y="982" width="440" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="102" y="1002" width="260" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<text x="608" y="998" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Date</text>
+<rect x="806" y="980" width="120" height="28" rx="14" fill="#FFFFFF" stroke="#0B6E99" stroke-width="2"/>
+<rect x="816" y="988" width="12" height="12" rx="6" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="836" y="999" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<line x1="90" y1="1030" x2="1190" y2="1030" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1074" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Source and licence</text>
+<text x="90" y="1124" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Source (opens the publisher's site)</text>
+<text x="420" y="1124" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#0B6E99" text-anchor="start">Publisher name (date), document title, section ↗</text>
+<line x1="420" y1="1127" x2="780" y2="1127" stroke="#0B6E99" stroke-width="1"/>
+<line x1="90" y1="1134" x2="1190" y2="1134" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1176" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Licence</text>
+<text x="420" y="1176" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<line x1="90" y1="1186" x2="1190" y2="1186" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1228" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Source checked on</text>
+<text x="420" y="1228" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<line x1="90" y1="1238" x2="1190" y2="1238" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1280" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Record last updated on</text>
+<text x="420" y="1280" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<line x1="90" y1="1290" x2="1190" y2="1290" stroke="#D0D5DD" stroke-width="1"/>
+<rect x="0" y="1326" width="1280" height="90" rx="0" fill="#F7F8FA" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1360" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Footer: independent-prototype disclaimer (no affiliation with UNICEF, WHO, DevInfo, DHIS2 or any government)</text>
+<text x="90" y="1384" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Draft-record and Spanish-text notices</text>
+</svg>

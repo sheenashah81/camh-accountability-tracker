@@ -1,0 +1,21 @@
+uuid: 5c80ce7b-eb04-479e-af7f-78fcf3a9191a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_retrieved_on
+    - node.type.indicator_value
+  module:
+    - datetime
+id: node.indicator_value.field_retrieved_on
+field_name: field_retrieved_on
+entity_type: node
+bundle: indicator_value
+label: 'Retrieved on'
+description: 'Not in the future.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

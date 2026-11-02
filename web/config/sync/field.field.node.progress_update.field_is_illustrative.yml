@@ -1,0 +1,23 @@
+uuid: 33f4fe8a-912d-4f43-86bb-e91264645846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_illustrative
+    - node.type.progress_update
+id: node.progress_update.field_is_illustrative
+field_name: field_is_illustrative
+entity_type: node
+bundle: progress_update
+label: 'Illustrative record'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Illustrative
+  off_label: Real
+field_type: boolean

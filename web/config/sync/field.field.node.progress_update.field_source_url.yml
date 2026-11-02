@@ -1,0 +1,23 @@
+uuid: e0864fc9-ca97-4e22-85e3-07f6ba16c7cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_url
+    - node.type.progress_update
+  module:
+    - link
+id: node.progress_update.field_source_url
+field_name: field_source_url
+entity_type: node
+bundle: progress_update
+label: 'Supporting evidence URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

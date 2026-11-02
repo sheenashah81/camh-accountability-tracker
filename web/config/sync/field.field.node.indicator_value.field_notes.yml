@@ -1,0 +1,19 @@
+uuid: 06edc4d8-b615-48ed-a3fb-ffd45f180658
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.indicator_value
+id: node.indicator_value.field_notes
+field_name: field_notes
+entity_type: node
+bundle: indicator_value
+label: Notes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

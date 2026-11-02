@@ -1,0 +1,638 @@
+<?php
+
+/**
+ * @file
+ * CAMH Tracker rules: attaches the data dictionary validation to content and
+ * applies a published progress update to its commitment.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Formats a number for the current interface language.
+ *
+ * Spanish uses a dot for thousands and a comma for decimals, and does not group
+ * four-digit numbers, matching the Intl.NumberFormat output used by the charts.
+ */
+function camh_tracker_format_number(float|int|string $value, int $decimals = 0): string {
+  $value = (float) $value;
+  if (\Drupal::languageManager()->getCurrentLanguage()->getId() !== 'es') {
+    return number_format($value, $decimals);
+  }
+  $grouping = abs($value) >= 10000 ? '.' : '';
+  return number_format($value, $decimals, ',', $grouping);
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ *
+ * Adds the rule set to every node, so it runs on forms, imports and the API.
+ */
+function camh_tracker_entity_type_alter(array &$entity_types): void {
+  if (isset($entity_types['node']) && $entity_types['node'] instanceof EntityTypeInterface) {
+    $entity_types['node']->addConstraint('CamhNodeRules');
+  }
+}
+
+/**
+ * Implements hook_node_presave().
+ *
+ * Keeps the commitment's "status last updated" date in step with its status
+ * (data dictionary: auto-set when the status changes).
+ */
+function camh_tracker_node_presave(NodeInterface $node): void {
+  // A new translation of a moderated record starts in the same state as the
+  // original, so a Spanish version of a Draft is never public by accident.
+  if (in_array($node->bundle(), ['commitment', 'progress_update'], TRUE) && !$node->isNew() && !$node->isDefaultTranslation()
+    && $node->hasField('moderation_state') && $node->isNewTranslation()) {
+    $default = $node->getUntranslated();
+    $node->set('moderation_state', $default->get('moderation_state')->value ?: 'draft');
+  }
+  if ($node->bundle() !== 'commitment' || $node->isNew()) {
+    return;
+  }
+  $original = $node->original ?? NULL;
+  if ($original && (string) $original->get('field_status')->target_id !== (string) $node->get('field_status')->target_id
+    && $original->get('field_status_updated_on')->value === $node->get('field_status_updated_on')->value) {
+    $node->set('field_status_updated_on', date('Y-m-d'));
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ * Applying a published progress update sets the commitment's status.
+ */
+function camh_tracker_node_update(NodeInterface $node): void {
+  camh_tracker_apply_progress_update($node);
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function camh_tracker_node_insert(NodeInterface $node): void {
+  camh_tracker_apply_progress_update($node);
+}
+
+/**
+ * Sets the commitment status from a published progress update.
+ */
+function camh_tracker_apply_progress_update(NodeInterface $node): void {
+  if ($node->bundle() !== 'progress_update' || !$node->isPublished()) {
+    return;
+  }
+  $commitment = $node->get('field_commitment')->entity;
+  $new_status = $node->get('field_new_status')->target_id;
+  if ($commitment && $new_status && (string) $commitment->get('field_status')->target_id !== (string) $new_status) {
+    $commitment->set('field_status', $new_status);
+    $commitment->set('moderation_state', $commitment->get('moderation_state')->value ?: 'draft');
+    $commitment->setNewRevision(TRUE);
+    $commitment->setRevisionLogMessage('Status set by published progress update ' . $node->id());
+    $commitment->save();
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ *
+ * Lets public lists filter by country or institution with a drop-down of names
+ * (the core "entity reference" filter) instead of a raw number box.
+ */
+function camh_tracker_views_data_alter(array &$data): void {
+  // A year drop-down for commitments (by the year made or adopted).
+  $data['node__field_date_made']['camh_year'] = [
+    'title' => t('Year made or adopted'),
+    'help' => t('Filter by year, with a drop-down of the years in the data.'),
+    'filter' => ['id' => 'camh_year', 'real field' => 'field_date_made_value'],
+  ];
+  foreach (['field_country', 'field_institution'] as $field) {
+    $table = "node__$field";
+    if (isset($data[$table][$field . '_target_id']['filter'])) {
+      $data[$table][$field . '_target_id']['filter']['id'] = 'entity_reference';
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ *
+ * Declares the extra blocks shown on the commitment page, so editors can
+ * reorder them under Structure, Content types, Commitment, Manage display.
+ */
+function camh_tracker_entity_extra_field_info(): array {
+  $extra = [];
+  $items = [
+    'record_notices' => ['Record notices', -20],
+    'progress_updates' => ['Progress updates', 20],
+    'milestones' => ['Milestones and timeline', 21],
+    'provenance' => ['Source and licence', 30],
+  ];
+  foreach ($items as $name => [$label, $weight]) {
+    $extra['node']['commitment']['display'][$name] = [
+      'label' => $label, 'description' => 'Added by CAMH Tracker rules', 'weight' => $weight, 'visible' => TRUE,
+    ];
+  }
+  foreach (['country_commitments' => ['Commitments in this country', 20], 'country_indicators' => ['Indicators', 21]] as $name => [$label, $weight]) {
+    $extra['node']['country']['display'][$name] = [
+      'label' => $label, 'description' => 'Added by CAMH Tracker rules', 'weight' => $weight, 'visible' => TRUE,
+    ];
+  }
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view() for nodes.
+ *
+ * Builds the commitment page blocks: notices (illustrative, no recent update,
+ * Spanish pending review), progress updates, milestones and provenance.
+ */
+function camh_tracker_node_view(array &$build, NodeInterface $node, $display, $view_mode): void {
+  if ($node->bundle() === 'country' && $view_mode === 'full') {
+    camh_tracker_country_profile($build, $node, $display);
+    return;
+  }
+  if ($node->bundle() !== 'commitment' || $view_mode !== 'full') {
+    return;
+  }
+  $date = \Drupal::service('date.formatter');
+  $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $cache = ['tags' => $node->getCacheTags(), 'contexts' => ['languages:language_content'], 'max-age' => 86400];
+
+  if ($display->getComponent('record_notices')) {
+    $notices = [];
+    if ($node->get('field_is_illustrative')->value) {
+      $notices[] = t('Illustrative record. It was added to show how the tracker works and is not an official government commitment.');
+    }
+    $updated = $node->get('field_status_updated_on')->value;
+    if ($updated && strtotime($updated) < strtotime('-12 months')) {
+      $notices[] = t('No recent update. The status was last updated on @date, more than 12 months ago.', ['@date' => $date->format(strtotime($updated), 'camh_date')]);
+    }
+    if (!$node->isPublished()) {
+      $notices[] = t('This record is not published. It is only visible to people who can review it.');
+    }
+    if ($lang === 'es' && $node->get('field_es_review_status')->value !== 'reviewed') {
+      $notices[] = t('The Spanish text is AI-assisted and pending human review.');
+    }
+    if ($notices) {
+      $build['record_notices'] = [
+        '#type' => 'container', '#attributes' => ['class' => ['record-notices'], 'role' => 'note'], '#cache' => $cache,
+        'list' => ['#theme' => 'item_list', '#items' => $notices],
+      ];
+    }
+  }
+
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+  if ($display->getComponent('progress_updates')) {
+    $ids = $storage->getQuery()->accessCheck(TRUE)->condition('type', 'progress_update')->condition('status', 1)
+      ->condition('field_commitment', $node->id())->sort('field_update_date', 'DESC')->execute();
+    $rows = [];
+    foreach ($storage->loadMultiple($ids) as $u) {
+      $u = \Drupal::service('entity.repository')->getTranslationFromContext($u);
+      $row = [
+        $date->format(strtotime($u->get('field_update_date')->value), 'camh_date'),
+        $u->get('field_new_status')->entity ? ['data' => camh_tracker_status_badge($u->get('field_new_status')->entity)] : '',
+        ['data' => ['#markup' => strip_tags((string) $u->get('field_summary')->value)]],
+      ];
+      $url = $u->get('field_source_url')->uri;
+      $host = $url ? preg_replace('/^www\./', '', (string) parse_url($url, PHP_URL_HOST)) : '';
+      $row[] = $url ? ['data' => ['#type' => 'link', '#title' => t('Evidence (@host)', ['@host' => $host]),
+        '#url' => \Drupal\Core\Url::fromUri($url), '#attributes' => ['rel' => 'noopener noreferrer', 'class' => ['external-source']]]] : '';
+      $row[] = $u->get('field_is_illustrative')->value ? t('Illustrative') : '';
+      $rows[] = $row;
+    }
+    $header = [t('Date'), t('Status'), t('Summary'), t('Source')];
+    if (array_filter(array_column($rows, 4))) {
+      $header[] = t('Record type');
+    }
+    else {
+      $rows = array_map(fn($r) => array_slice($r, 0, 4), $rows);
+    }
+    $build['progress_updates'] = [
+      '#type' => 'container', '#attributes' => ['class' => ['commitment-progress']], '#cache' => $cache + [],
+      'heading' => ['#markup' => '<h2>' . t('Progress updates') . '</h2>'],
+      'table' => [
+        '#type' => 'table', '#caption' => t('Published progress updates, newest first'),
+        '#header' => $header,
+        '#rows' => camh_tracker_label_cells($rows, $header), '#empty' => t('No progress updates have been published yet.'),
+      ],
+    ];
+    $build['progress_updates']['#cache']['tags'][] = 'node_list:progress_update';
+  }
+
+  if ($display->getComponent('milestones')) {
+    $ids = $storage->getQuery()->accessCheck(TRUE)->condition('type', 'milestone')->condition('status', 1)
+      ->condition('field_commitment', $node->id())->sort('field_due_date', 'ASC')->execute();
+    $rows = [];
+    foreach ($storage->loadMultiple($ids) as $m) {
+      $m = \Drupal::service('entity.repository')->getTranslationFromContext($m);
+      $done = $m->get('field_completed_on')->value;
+      $rows[] = [
+        $m->label(),
+        $date->format(strtotime($m->get('field_due_date')->value), 'camh_date'),
+        $m->get('field_milestone_status')->entity ? ['data' => camh_tracker_status_badge($m->get('field_milestone_status')->entity)] : '',
+        $done ? $date->format(strtotime($done), 'camh_date') : '',
+        $m->get('field_is_illustrative')->value ? t('Illustrative') : '',
+      ];
+    }
+    $m_header = [t('Milestone'), t('Due'), t('Status'), t('Completed on')];
+    if (array_filter(array_column($rows, 4))) {
+      $m_header[] = t('Record type');
+    }
+    else {
+      $rows = array_map(fn($r) => array_slice($r, 0, 4), $rows);
+    }
+    $build['milestones'] = [
+      '#type' => 'container', '#attributes' => ['class' => ['commitment-milestones']], '#cache' => $cache,
+      'heading' => ['#markup' => '<h2>' . t('Milestones and timeline') . '</h2>'],
+      'table' => [
+        '#type' => 'table', '#caption' => t('Milestones in date order'),
+        '#header' => $m_header,
+        '#rows' => camh_tracker_label_cells($rows, $m_header), '#empty' => t('No milestones have been recorded for this commitment.'),
+      ],
+    ];
+    $build['milestones']['#cache']['tags'][] = 'node_list:milestone';
+  }
+
+  if ($display->getComponent('provenance')) {
+    $items = [];
+    $name = $node->get('field_source_name')->value;
+    $url = $node->get('field_source_url')->uri;
+    $items[] = ['label' => t('Source (opens the publisher\'s site)'), 'value' => $url
+      ? ['#type' => 'link', '#title' => $name, '#url' => \Drupal\Core\Url::fromUri($url), '#attributes' => ['rel' => 'noopener noreferrer', 'class' => ['external-source']]]
+      : ['#plain_text' => $name]];
+    $licence = $node->get('field_licence')->entity;
+    $licence = $licence ? \Drupal::service('entity.repository')->getTranslationFromContext($licence) : NULL;
+    $items[] = ['label' => t('Licence'), 'value' => ['#plain_text' => $licence ? $licence->label() : t('Not recorded')]];
+    $verified = $node->get('field_verified_on')->value;
+    $items[] = ['label' => t('Source checked on'), 'value' => ['#plain_text' => $verified ? $date->format(strtotime($verified), 'camh_date') : t('Not recorded')]];
+    $items[] = ['label' => t('Record last updated'), 'value' => ['#plain_text' => $date->format($node->getChangedTime(), 'camh_date')]];
+    $build['provenance'] = [
+      '#type' => 'container', '#attributes' => ['class' => ['commitment-provenance']], '#cache' => $cache,
+      'heading' => ['#markup' => '<h2>' . t('Source and licence') . '</h2>'],
+      'list' => ['#theme' => 'camh_definition_list', '#items' => $items],
+    ];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function camh_tracker_theme(): array {
+  return [
+    'camh_definition_list' => ['variables' => ['items' => []], 'template' => 'camh-definition-list'],
+    'camh_status_badge' => ['variables' => ['code' => '', 'label' => '', 'icon' => ''], 'template' => 'camh-status-badge'],
+  ];
+}
+
+/**
+ * Builds a status badge (icon, text label and colour) for a status term.
+ *
+ * Status is never shown by colour alone (design tokens, accessibility rule).
+ */
+function camh_tracker_status_badge($term): array {
+  $icons = [
+    'not-started' => 'bi-circle',
+    'in-progress' => 'bi-hourglass-split',
+    'on-track' => 'bi-arrow-up-right-circle',
+    'delayed' => 'bi-exclamation-triangle',
+    'completed' => 'bi-check-circle-fill',
+    'no-recent-update' => 'bi-dash-circle',
+  ];
+  $code = $term->hasField('field_term_code') ? (string) $term->get('field_term_code')->value : '';
+  $term = \Drupal::service('entity.repository')->getTranslationFromContext($term);
+  return [
+    '#theme' => 'camh_status_badge', '#code' => $code, '#label' => $term->label(),
+    '#icon' => $icons[$code] ?? 'bi-circle',
+    '#cache' => ['tags' => $term->getCacheTags()],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Interim styles for the public tracker pages (table alignment, one font).
+ * To be replaced by the Bootstrap 5 sub-theme.
+ */
+function camh_tracker_page_attachments(array &$attachments): void {
+  $route = \Drupal::routeMatch();
+  $node = $route->getParameter('node');
+  $on_page = $route->getRouteName() === 'view.commitments.page_1'
+    || ($node instanceof NodeInterface && in_array($node->bundle(), ['commitment', 'country'], TRUE) && $route->getRouteName() === 'entity.node.canonical')
+    || $route->getRouteName() === 'view.countries.page_1'
+    || $route->getRouteName() === 'camh_tracker.overview'
+    || $route->getRouteName() === 'camh_tracker.data'
+    || $route->getRouteName() === 'camh_tracker.indicators';
+  // The layout-test banner needs the interim stylesheet on every page.
+  if (\Drupal::languageManager()->getCurrentLanguage()->getId() === 'ar') {
+    $on_page = TRUE;
+  }
+  if ($on_page) {
+    $attachments['#attached']['library'][] = 'camh_tracker/interim';
+  }
+  // A short description for search results and link previews on public pages.
+  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+    $description = (string) t('An independent prototype that tracks public commitments on child and adolescent mental health, with sources, licences and indicator data. Not affiliated with UNICEF or WHO.');
+    if ($node instanceof NodeInterface && $node->bundle() === 'commitment' && !$node->get('field_description')->isEmpty()) {
+      $text = trim(preg_replace('/\s+/', ' ', strip_tags((string) $node->get('field_description')->value)));
+      $description = mb_strlen($text) > 155 ? mb_substr($text, 0, 152) . '...' : $text;
+    }
+    $attachments['#attached']['html_head'][] = [['#tag' => 'meta', '#attributes' => ['name' => 'description', 'content' => $description]], 'camh_meta_description'];
+  }
+}
+
+/**
+ * Implements hook_path_alias_presave().
+ *
+ * Tracker web addresses work under every language prefix (/en and /es), so
+ * their aliases are saved for all languages.
+ */
+function camh_tracker_path_alias_presave(\Drupal\path_alias\PathAliasInterface $alias): void {
+  $prefixes = ['/commitments/', '/countries/', '/institutions/', '/indicators/', '/documents/'];
+  foreach ($prefixes as $prefix) {
+    if (str_starts_with($alias->getAlias(), $prefix) && str_starts_with($alias->getPath(), '/node/')) {
+      $alias->set('langcode', 'und');
+      return;
+    }
+  }
+}
+
+/**
+ * Adds a data-label (the column heading) to each cell so that tables can be
+ * shown as stacked cards on narrow screens.
+ */
+function camh_tracker_label_cells(array $rows, array $header): array {
+  foreach ($rows as $r => $row) {
+    foreach (array_values($row) as $c => $cell) {
+      $label = (string) ($header[$c] ?? '');
+      $cell = is_array($cell) && isset($cell['data']) ? $cell : ['data' => $cell];
+      $cell['data-label'] = $label;
+      $rows[$r][$c] = $cell;
+    }
+  }
+  return $rows;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Views tables: adds data-label to cells.
+ */
+function camh_tracker_preprocess_views_view_table(array &$variables): void {
+  foreach ($variables['rows'] as $i => $row) {
+    foreach ($row['columns'] as $key => $col) {
+      $content = $variables['header'][$key]['content'] ?? '';
+      $label = trim(strip_tags((string) (is_array($content) ? \Drupal::service('renderer')->renderInIsolation($content) : $content)));
+      if (isset($variables['rows'][$i]['columns'][$key]['attributes'])) {
+        $variables['rows'][$i]['columns'][$key]['attributes']->setAttribute('data-label', $label);
+      }
+    }
+  }
+}
+
+/**
+ * Builds the country profile blocks: published commitments and indicators.
+ */
+function camh_tracker_country_profile(array &$build, NodeInterface $node, $display): void {
+  $date = \Drupal::service('date.formatter');
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $repo = \Drupal::service('entity.repository');
+  $cache = ['tags' => $node->getCacheTags(), 'contexts' => ['languages:language_content'], 'max-age' => 86400];
+
+  if ($display->getComponent('country_commitments')) {
+    $ids = $storage->getQuery()->accessCheck(TRUE)->condition('type', 'commitment')->condition('status', 1)
+      ->condition('field_country', $node->id())->sort('changed', 'DESC')->execute();
+    $rows = [];
+    foreach ($storage->loadMultiple($ids) as $c) {
+      $c = $repo->getTranslationFromContext($c);
+      $rows[] = [
+        ['data' => ['#type' => 'link', '#title' => $c->label(), '#url' => $c->toUrl()]],
+        $c->get('field_status')->entity ? ['data' => camh_tracker_status_badge($c->get('field_status')->entity)] : '',
+        $date->format($c->getChangedTime(), 'camh_date'),
+      ];
+    }
+    $build['country_commitments'] = [
+      '#type' => 'container', '#attributes' => ['class' => ['country-commitments']], '#cache' => $cache,
+      'heading' => ['#markup' => '<h2>' . t('Commitments in this country') . '</h2>'],
+      'table' => [
+        '#type' => 'table', '#caption' => t('Published commitments'),
+        '#header' => [t('Commitment'), t('Status'), t('Last updated')],
+        '#rows' => camh_tracker_label_cells($rows, [t('Commitment'), t('Status'), t('Last updated')]), '#empty' => t('No commitments have been published for this country yet.'),
+      ],
+    ];
+    $build['country_commitments']['#cache']['tags'][] = 'node_list:commitment';
+  }
+
+  if ($display->getComponent('country_indicators')) {
+    $rows = [];
+    $sources = [];
+    $charts = [];
+    $indicator_ids = $storage->getQuery()->accessCheck(TRUE)->condition('type', 'indicator')->condition('status', 1)->sort('title')->execute();
+    foreach ($storage->loadMultiple($indicator_ids) as $ind) {
+      $ind = $repo->getTranslationFromContext($ind);
+      $vids = $storage->getQuery()->accessCheck(TRUE)->condition('type', 'indicator_value')->condition('status', 1)
+        ->condition('field_indicator', $ind->id())->condition('field_country', $node->id())
+        ->sort('field_year', 'DESC')->execute();
+      $values = array_values($storage->loadMultiple($vids));
+      if (!$values) {
+        continue;
+      }
+      $fmt = fn($v) => camh_tracker_format_number($v, (float) $v >= 1000 ? 0 : 2);
+      $latest = $values[0];
+      $earliest = end($values);
+      $series = array_reverse($values);
+      $charts[] = [
+        'indicator' => $ind, 'series' => $series, 'fmt' => $fmt,
+      ];
+      $rows[] = [
+        ['data' => ['#markup' => '<strong>' . htmlspecialchars($ind->label()) . '</strong><br><span class="indicator-definition">' . strip_tags((string) $ind->get('field_definition')->value) . '</span>']],
+        $latest->get('field_year')->value,
+        $fmt($latest->get('field_value')->value),
+        $earliest->get('field_year')->value . ': ' . $fmt($earliest->get('field_value')->value),
+        $ind->get('field_unit')->value,
+      ];
+      $licence = $latest->get('field_licence')->entity;
+      $licence = $licence ? $repo->getTranslationFromContext($licence) : NULL;
+      $sources[] = ['label' => $ind->label(), 'value' => [
+        '#markup' => htmlspecialchars((string) $latest->get('field_source_name')->value) . ' (' . ($licence ? htmlspecialchars($licence->label()) : '') . '; retrieved '
+          . $date->format(strtotime($latest->get('field_retrieved_on')->value), 'camh_date') . ')',
+      ]];
+    }
+    $build['country_indicators'] = [
+      '#type' => 'container', '#attributes' => ['class' => ['country-indicators']], '#cache' => $cache,
+      'heading' => ['#markup' => '<h2>' . t('Indicators') . '</h2>'],
+      'table' => [
+        '#type' => 'table', '#caption' => t('Latest available value for each indicator'),
+        '#header' => [t('Indicator'), t('Latest year'), t('Latest value'), t('Earliest in series'), t('Unit')],
+        '#rows' => camh_tracker_label_cells($rows, [t('Indicator'), t('Latest year'), t('Latest value'), t('Earliest in series'), t('Unit')]), '#empty' => t('No indicator data is available for this country.'),
+      ],
+    ];
+    if ($charts) {
+      $trends = ['#type' => 'container', '#attributes' => ['class' => ['country-trends']],
+        'heading' => ['#markup' => '<h2>' . t('Trends over time') . '</h2>']];
+      foreach ($charts as $i => $c) {
+        $ind = $c['indicator'];
+        $first = $c['series'][0];
+        $last = end($c['series']);
+        $unit = $ind->get('field_unit')->value;
+        $summary = t('Line chart: @name in @country, @y1 to @y2. It goes from @v1 to @v2 (@unit). The data table below has every value.', [
+          '@name' => $ind->label(), '@country' => $node->label(), '@y1' => $first->get('field_year')->value, '@y2' => $last->get('field_year')->value,
+          '@v1' => $c['fmt']($first->get('field_value')->value), '@v2' => $c['fmt']($last->get('field_value')->value), '@unit' => $unit,
+        ]);
+        $table_rows = [];
+        foreach ($c['series'] as $v) {
+          $table_rows[] = [$v->get('field_year')->value, $c['fmt']($v->get('field_value')->value)];
+        }
+        $trends['chart_' . $i] = [
+          '#type' => 'html_tag', '#tag' => 'figure', '#attributes' => ['class' => ['indicator-chart'],
+            'data-country' => $node->uuid(), 'data-indicator' => $ind->uuid(), 'data-unit' => $unit],
+          'caption' => ['#type' => 'html_tag', '#tag' => 'figcaption', '#value' => $ind->label()],
+          'status' => ['#type' => 'html_tag', '#tag' => 'p', '#attributes' => ['class' => ['indicator-chart__status']], '#value' => t('Loading chart...')],
+          'canvas' => ['#type' => 'html_tag', '#tag' => 'div', '#attributes' => ['class' => ['indicator-chart__canvas'], 'role' => 'img', 'aria-label' => $summary, 'tabindex' => 0]],
+          'details' => ['#type' => 'html_tag', '#tag' => 'details', 'summary' => ['#type' => 'html_tag', '#tag' => 'summary', '#value' => t('Data table: @name', ['@name' => $ind->label()])],
+            'table' => ['#type' => 'table', '#header' => [t('Year'), t('Value (@unit)', ['@unit' => $unit])], '#rows' => $table_rows]],
+        ];
+      }
+      $trends['#attached']['library'][] = 'camh_tracker/charts';
+      $build['country_indicators']['trends'] = $trends;
+    }
+    if ($sources) {
+      $build['country_indicators']['sources_heading'] = ['#markup' => '<h3>' . t('Data sources') . '</h3>'];
+      $build['country_indicators']['sources'] = ['#theme' => 'camh_definition_list', '#items' => $sources];
+    }
+    $build['country_indicators']['#cache']['tags'][] = 'node_list:indicator_value';
+    $build['country_indicators']['further_data'] = [
+      '#markup' => '<p class="country-further-data"><strong>' . t('Further data') . ':</strong> '
+        . t('Service, workforce and policy data for many countries is published in the <a href="@url" rel="noopener">WHO Mental Health Atlas</a> (opens WHO.int; not every country took part).', ['@url' => 'https://www.who.int/teams/mental-health-and-substance-use/data-research/mental-health-atlas'])
+        . '</p>',
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views.
+ *
+ * On the Commitments list: shows the active filters as removable chips and adds
+ * the Table or Map toggle with a map of the countries in the current results.
+ */
+function camh_tracker_preprocess_views_view(array &$variables): void {
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+  static $busy = FALSE;
+  if ($busy || $view->id() !== 'commitments' || $view->current_display !== 'page_1') {
+    return;
+  }
+  $busy = TRUE;
+  $repo = \Drupal::service('entity.repository');
+  $input = $view->getExposedInput();
+
+  // Active filter chips.
+  $chips = [];
+  foreach ($view->filter as $filter) {
+    if (!$filter->isExposed()) {
+      continue;
+    }
+    $ident = $filter->options['expose']['identifier'];
+    $value = $input[$ident] ?? NULL;
+    if ($value === NULL || $value === '' || $value === 'All' || $value === []) {
+      continue;
+    }
+    $value = is_array($value) ? reset($value) : $value;
+    $text = (string) $value;
+    if (ctype_digit($text)) {
+      $entity = ($filter->options['plugin_id'] ?? '') === 'entity_reference' || str_contains($ident, 'country')
+        ? \Drupal\node\Entity\Node::load($text) : \Drupal\taxonomy\Entity\Term::load($text);
+      if (!$entity && is_numeric($text) && strlen($text) < 4) {
+        $entity = \Drupal\taxonomy\Entity\Term::load($text) ?: \Drupal\node\Entity\Node::load($text);
+      }
+      if ($entity && $ident !== 'year') {
+        $text = $repo->getTranslationFromContext($entity)->label();
+      }
+    }
+    $label = (string) $filter->options['expose']['label'];
+    $query = \Drupal::request()->query->all();
+    unset($query[$ident], $query['page']);
+    $chips[] = [
+      '#type' => 'link',
+      '#title' => ['#markup' => '<span>' . \Drupal\Component\Utility\Html::escape($label . ': ' . $text) . '</span> <span aria-hidden="true">&times;</span>'],
+      '#url' => \Drupal\Core\Url::fromRoute('<current>', [], ['query' => $query]),
+      '#attributes' => ['class' => ['filter-chip'], 'aria-label' => t('Remove filter @label: @value', ['@label' => $label, '@value' => $text])],
+    ];
+  }
+
+  // The countries in ALL current results (not only the current page), for the map.
+  $countries = [];
+  $all = \Drupal\views\Views::getView('commitments');
+  $all->setDisplay('page_1');
+  $all->setExposedInput($input);
+  $all->setItemsPerPage(0);
+  $all->preExecute();
+  $all->execute();
+  foreach ($all->result as $row) {
+    $node = $row->_entity ?? NULL;
+    $country = $node ? $node->get('field_country')->entity : NULL;
+    if (!$country) {
+      continue;
+    }
+    $iso = $country->get('field_iso3')->value;
+    $country = $repo->getTranslationFromContext($country);
+    $countries[$iso]['iso3'] = $iso;
+    $countries[$iso]['name'] = $country->label();
+    $countries[$iso]['url'] = $country->toUrl()->toString();
+    $countries[$iso]['published'] = ($countries[$iso]['published'] ?? 0) + 1;
+  }
+  $total = count($all->result);
+  $busy = FALSE;
+
+  $header = [];
+  $header['chips'] = [
+    '#type' => 'container', '#attributes' => ['class' => ['active-filters']],
+    'status' => ['#markup' => '<p class="visually-hidden" role="status" aria-live="polite">' . \Drupal::translation()->formatPlural($total, '1 commitment matches the filters.', '@count commitments match the filters.') . '</p>'],
+  ];
+  if ($chips) {
+    $header['chips']['label'] = ['#markup' => '<p class="active-filters__label">' . t('Active filters') . '</p>'];
+    $header['chips']['list'] = ['#theme' => 'item_list', '#items' => $chips, '#attributes' => ['class' => ['filter-chips']]];
+  }
+  $header['toggle'] = [
+    '#type' => 'container', '#attributes' => ['class' => ['view-toggle'], 'role' => 'group', 'aria-label' => t('Choose how to see the results')],
+    'table' => ['#type' => 'html_tag', '#tag' => 'button', '#attributes' => ['type' => 'button', 'class' => ['view-toggle__button'], 'data-view' => 'table', 'aria-pressed' => 'true'], '#value' => t('Table')],
+    'map' => ['#type' => 'html_tag', '#tag' => 'button', '#attributes' => ['type' => 'button', 'class' => ['view-toggle__button'], 'data-view' => 'map', 'aria-pressed' => 'false'], '#value' => t('Map')],
+  ];
+  $header['map'] = [
+    '#type' => 'container', '#attributes' => ['class' => ['list-map-wrapper'], 'hidden' => TRUE],
+    'canvas' => ['#type' => 'html_tag', '#tag' => 'div', '#attributes' => ['id' => 'list-map', 'class' => ['overview-map'], 'role' => 'group',
+      'aria-label' => t('Map of the countries in the current results. The table view lists the same commitments.')]],
+  ];
+  $path = \Drupal::service('extension.list.module')->getPath('camh_tracker');
+  // Shown after the filter form and before the results, as in the wireframe.
+  $variables['attachment_before'] = $header;
+  $variables['#attached']['library'][] = 'camh_tracker/list-view';
+  $variables['#attached']['drupalSettings']['camhListMap'] = [
+    'geojson' => '/' . $path . '/data/world-countries.geojson',
+    'countries' => array_values($countries),
+    'text' => ['published' => (string) t('commitments in these results'), 'none' => '', 'open' => ''],
+  ];
+}
+
+/**
+ * Implements hook_language_switch_links_alter().
+ *
+ * Arabic exists only as a right-to-left layout test (no Arabic content), so it
+ * is reachable by address (/ar) but not offered to visitors.
+ */
+function camh_tracker_language_switch_links_alter(array &$links, $type, \Drupal\Core\Url $url): void {
+  unset($links['ar']);
+}
+
+/**
+ * Implements hook_page_top().
+ *
+ * States plainly that the Arabic address is a layout test.
+ */
+function camh_tracker_page_top(array &$page_top): void {
+  if (\Drupal::languageManager()->getCurrentLanguage()->getId() === 'ar') {
+    $page_top['rtl_test_banner'] = [
+      '#markup' => '<p class="rtl-test-banner" role="note" lang="en" dir="ltr">Right-to-left layout test. The text is English: no Arabic translation exists yet. This address is for testing only.</p>',
+      '#cache' => ['contexts' => ['languages:language_interface']],
+    ];
+  }
+}

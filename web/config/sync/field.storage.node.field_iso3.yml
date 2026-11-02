@@ -1,0 +1,21 @@
+uuid: 531b2b93-80d1-477b-9805-92a754975982
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_iso3
+field_name: field_iso3
+entity_type: node
+type: string
+settings:
+  max_length: 3
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,93 @@
+name: CI
+
+# Runs on every push to main and on pull requests:
+#   1. data: consistency checks on the cited CSV files (no site needed)
+#   2. site: builds the Drupal site from the exported configuration, loads the
+#      data, then runs the validation tests and the accessibility check.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  data:
+    name: Data checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the CSV files
+        run: python3 tests/data/check_data.py
+
+  site:
+    name: Site build, validation tests and accessibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          autostart: false
+
+      - name: Start the DDEV project
+        working-directory: web
+        run: ddev start
+
+      - name: Install PHP dependencies
+        working-directory: web
+        run: ddev composer install --no-interaction
+
+      - name: Install a blank Drupal site
+        working-directory: web
+        run: ddev drush site:install standard --account-name=admin --account-pass="$(openssl rand -hex 16)" --site-name="CAMH Tracker (CI)" -y
+
+      - name: Import the exported configuration
+        working-directory: web
+        run: |
+          ddev drush php:script scripts/ci_prepare.php
+          ddev drush config:set system.site uuid "$(grep '^uuid:' config/sync/system.site.yml | cut -d' ' -f2)" -y
+          ddev drush config:import -y
+          ddev drush cr
+
+      - name: Fetch the official Spanish interface translation
+        working-directory: web
+        run: |
+          ddev drush locale:check
+          ddev drush locale:update
+          ddev drush locale:import es /var/www/html/web/modules/custom/camh_tracker/translations/es.po --type=customized --override=all
+
+      - name: Load the cited data and Spanish text
+        working-directory: web
+        run: |
+          ddev drush php:script scripts/load_vocabulary_terms.php
+          ddev drush php:script scripts/build_content_model_3.php
+          ddev drush php:script scripts/build_commitment_page.php
+          ddev drush php:script scripts/translate_to_spanish.php
+          ddev drush php:script scripts/normalise_aliases.php
+          ddev drush cr
+
+      - name: Validation and publication tests
+        working-directory: web
+        run: ddev drush php:script /var/www/tests/drupal/validation_smoke_test.php | tee ../validation-test.log; ! grep -q FAIL ../validation-test.log
+
+      - name: User journeys (Behat)
+        working-directory: web
+        run: ddev exec vendor/bin/behat --config /var/www/tests/behat/behat.yml --format progress
+
+      - name: Accessibility and mobile check
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -r tests/accessibility/requirements.txt
+          .venv/bin/python tests/accessibility/axe_check.py
+
+      - name: Keep the accessibility report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-report
+          path: evidence/accessibility/axe-report.md

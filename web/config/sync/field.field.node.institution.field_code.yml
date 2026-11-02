@@ -1,0 +1,19 @@
+uuid: 13fa22f2-0d49-4675-bbe9-bf8c79aa0366
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code
+    - node.type.institution
+id: node.institution.field_code
+field_name: field_code
+entity_type: node
+bundle: institution
+label: 'Institution code'
+description: 'Format ISO3-ABBREVIATION, for example KEN-MOH. Must be unique.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

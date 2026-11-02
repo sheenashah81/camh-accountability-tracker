@@ -1,0 +1,16 @@
+uuid: d0f7415c-f415-4fee-bb4c-cb3a8f3baa24
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.institution_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.institution_type
+target_entity_type_id: taxonomy_term
+target_bundle: institution_type
+default_langcode: en
+language_alterable: false

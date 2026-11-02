@@ -1,0 +1,9 @@
+uuid: 880e8794-42be-4ee0-a1df-a27bc1707df9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Institution type'
+vid: institution_type
+description: null
+weight: 0
+new_revision: false

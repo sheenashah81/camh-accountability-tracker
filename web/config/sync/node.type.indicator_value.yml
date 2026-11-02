@@ -1,0 +1,11 @@
+uuid: 43531c00-f7c9-4f2c-8e8c-b62ee3138090
+langcode: en
+status: true
+dependencies: {  }
+name: 'Indicator value'
+type: indicator_value
+description: 'One observation: one indicator, one country, one year.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

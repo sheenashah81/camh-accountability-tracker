@@ -1,0 +1,23 @@
+uuid: f6dbbbb8-d049-48e4-a6dd-b2b208513479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_url
+    - node.type.indicator_value
+  module:
+    - link
+id: node.indicator_value.field_source_url
+field_name: field_source_url
+entity_type: node
+bundle: indicator_value
+label: 'Source URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

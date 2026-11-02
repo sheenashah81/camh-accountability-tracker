@@ -1,0 +1,22 @@
+uuid: c7494f7c-aa47-4ce3-9738-403215128a03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.commitment
+  module:
+    - text
+id: node.commitment.field_description
+field_name: field_description
+entity_type: node
+bundle: commitment
+label: Description
+description: 'Plain language, 50 to 1,200 characters.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

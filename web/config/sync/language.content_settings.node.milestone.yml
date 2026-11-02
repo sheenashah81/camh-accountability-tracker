@@ -1,0 +1,16 @@
+uuid: 1d398d73-2956-41e4-95dc-1281cbc1a732
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.milestone
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.milestone
+target_entity_type_id: node
+target_bundle: milestone
+default_langcode: en
+language_alterable: false

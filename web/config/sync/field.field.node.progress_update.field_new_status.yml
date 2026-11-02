@@ -1,0 +1,24 @@
+uuid: 06e9990c-d526-4482-abb0-db4c40c70f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_status
+    - node.type.progress_update
+    - taxonomy.vocabulary.status
+id: node.progress_update.field_new_status
+field_name: field_new_status
+entity_type: node
+bundle: progress_update
+label: 'New status'
+description: 'Publishing this update sets the commitment status.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      status: status
+field_type: entity_reference

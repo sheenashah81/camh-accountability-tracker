@@ -1,0 +1,22 @@
+uuid: 1e67eae2-81a6-4f6d-a47c-d4763938ab33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_comment
+    - node.type.commitment
+  module:
+    - text
+id: node.commitment.field_review_comment
+field_name: field_review_comment
+entity_type: node
+bundle: commitment
+label: 'Review comment'
+description: 'Required when a record is rejected.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

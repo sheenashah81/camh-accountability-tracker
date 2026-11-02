@@ -1,0 +1,21 @@
+uuid: 61df6f41-31e6-4084-b60f-ea35536b9718
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_verified_on
+    - node.type.commitment
+  module:
+    - datetime
+id: node.commitment.field_verified_on
+field_name: field_verified_on
+entity_type: node
+bundle: commitment
+label: 'Verified on'
+description: 'Date a person confirmed the source supports this record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

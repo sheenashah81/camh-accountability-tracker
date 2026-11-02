@@ -1,0 +1,25 @@
+uuid: 8a6177a8-9584-400b-b9fb-525fd41296d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - camh_theme
+id: camh_theme_main_menu
+theme: camh_theme
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main menu'
+  label_display: ''
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,82 @@
+display:
+  default:
+    display_options:
+      title: Compromisos
+      header:
+        result:
+          content: 'Mostrando @start a @end de @total compromisos'
+        area:
+          content:
+            value: '<p>Un compromiso es una promesa pública, ley, política o plan que un gobierno ha adoptado sobre la salud mental de niños y adolescentes. Cada registro enlaza con el documento público del que procede.</p>'
+      empty:
+        area_text_custom:
+          content: '<p><strong>Ningún compromiso coincide con estos filtros.</strong> Pruebe a quitar un filtro o a buscar con menos palabras, o use «Borrar todos los filtros».</p>'
+      filters:
+        combine:
+          expose:
+            label: 'Buscar compromisos'
+        field_country_target_id:
+          expose:
+            label: País
+        field_theme_target_id:
+          expose:
+            label: Tema
+        field_region_target_id:
+          expose:
+            label: Región
+        camh_year:
+          expose:
+            label: Año
+        field_status_target_id:
+          expose:
+            label: Estado
+      sorts:
+        changed:
+          expose:
+            label: 'Actualización más reciente'
+        title_1:
+          expose:
+            label: 'País de la A a la Z'
+        weight:
+          expose:
+            label: Estado
+      exposed_form:
+        options:
+          submit_button: 'Aplicar filtros'
+          reset_button_label: 'Borrar todos los filtros'
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Descendente
+      fields:
+        title:
+          label: Compromiso
+        title_1:
+          label: País
+        title_2:
+          label: Institución
+        field_theme:
+          label: Tema
+        field_status:
+          label: Estado
+        changed:
+          label: 'Última actualización'
+          settings:
+            custom_date_format: 'j \d\e F \d\e Y'
+        field_is_illustrative:
+          label: 'Tipo de registro'
+          settings:
+            format_custom_true: Ilustrativo
+      style:
+        options:
+          caption: 'Compromisos publicados'
+      pager:
+        options:
+          tags:
+            next: Siguiente
+            previous: Anterior
+            first: Primera
+            last: Última
+  page_1:
+    display_options:
+      menu:
+        title: Compromisos

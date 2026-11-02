@@ -1,0 +1,41 @@
+name: 'CAMH Tracker theme'
+type: theme
+description: 'Bootstrap 5 theme for the CAMH accountability tracker prototype (independent portfolio project). Derived from the Bootstrap 5 theme (GPL-2.0-or-later).'
+core_version_requirement: ^10.1 || ^11.0
+'base theme': stable9
+
+libraries:
+  - camh_theme/base
+  - camh_theme/messages
+  - core/normalize
+  - camh_theme/camh_theme-js-latest
+  - camh_theme/global-styling
+
+libraries-extend:
+  user/drupal.user:
+    - camh_theme/user
+  core/drupal.dropbutton:
+    - camh_theme/dropbutton
+  core/drupal.dialog:
+    - camh_theme/dialog
+  file/drupal.file:
+    - camh_theme/file
+  core/drupal.progress:
+    - camh_theme/progress
+
+ckeditor_stylesheets:
+  - css/style.css
+ckeditor5-stylesheets:
+  - css/ck5style.css
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+

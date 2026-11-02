@@ -1,0 +1,16 @@
+uuid: 412301e9-9766-40ad-bd12-d028d97a9db7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.indicator_direction
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.indicator_direction
+target_entity_type_id: taxonomy_term
+target_bundle: indicator_direction
+default_langcode: en
+language_alterable: false

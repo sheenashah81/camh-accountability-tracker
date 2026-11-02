@@ -1,0 +1,21 @@
+uuid: d857beff-d040-4b27-bc60-0834e1b85fc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_made
+    - node.type.commitment
+  module:
+    - datetime
+id: node.commitment.field_date_made
+field_name: field_date_made
+entity_type: node
+bundle: commitment
+label: 'Date made or adopted'
+description: 'Required before the commitment goes to review.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

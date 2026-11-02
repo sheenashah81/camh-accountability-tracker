@@ -1,0 +1,70 @@
+uuid: 7510aa8d-ba05-4c77-aa60-01f72bf2e613
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.commitment
+    - node.type.progress_update
+  module:
+    - content_moderation
+id: commitment_review
+label: 'Commitment review'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      weight: 0
+      published: false
+      default_revision: false
+    in_review:
+      label: 'In review'
+      weight: 2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+    rejected:
+      label: Rejected
+      weight: 3
+      published: false
+      default_revision: false
+  transitions:
+    approve_and_publish:
+      label: 'Approve and publish'
+      from:
+        - in_review
+      to: published
+      weight: 3
+    back_to_draft:
+      label: 'Return to draft'
+      from:
+        - rejected
+      to: draft
+      weight: 4
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: 0
+    reject:
+      label: 'Reject with comment'
+      from:
+        - in_review
+      to: rejected
+      weight: 2
+    submit_for_review:
+      label: 'Submit for review'
+      from:
+        - draft
+      to: in_review
+      weight: 1
+  entity_types:
+    node:
+      - commitment
+      - progress_update

@@ -1,0 +1,24 @@
+uuid: 51224876-4ce4-44ea-a245-d979ed9f0098
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commitment
+    - node.type.commitment
+    - node.type.milestone
+id: node.milestone.field_commitment
+field_name: field_commitment
+entity_type: node
+bundle: milestone
+label: Commitment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      commitment: commitment
+field_type: entity_reference

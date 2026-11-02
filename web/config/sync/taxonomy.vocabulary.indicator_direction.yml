@@ -1,0 +1,9 @@
+uuid: cbf8486f-cfc4-4177-9ca2-1fcfa525c949
+langcode: en
+status: true
+dependencies: {  }
+name: 'Indicator direction'
+vid: indicator_direction
+description: null
+weight: 0
+new_revision: false

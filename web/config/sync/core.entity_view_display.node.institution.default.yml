@@ -1,0 +1,62 @@
+uuid: 197f9bc6-48c5-4de4-aec1-2e5dc7a3f887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.institution.field_code
+    - field.field.node.institution.field_country
+    - field.field.node.institution.field_institution_type
+    - field.field.node.institution.field_website
+    - node.type.institution
+  module:
+    - link
+    - user
+id: node.institution.default
+targetEntityType: node
+bundle: institution
+mode: default
+content:
+  field_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_country:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_institution_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

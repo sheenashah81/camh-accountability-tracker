@@ -1,0 +1,23 @@
+uuid: 4bd5d89a-2288-42f1-89ae-3fb042b30906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_illustrative
+    - node.type.document
+id: node.document.field_is_illustrative
+field_name: field_is_illustrative
+entity_type: node
+bundle: document
+label: 'Illustrative record'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Illustrative
+  off_label: Real
+field_type: boolean

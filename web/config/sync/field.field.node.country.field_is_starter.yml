@@ -1,0 +1,23 @@
+uuid: 58992e7b-ce6a-4355-abdc-cd531e1f84d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_starter
+    - node.type.country
+id: node.country.field_is_starter
+field_name: field_is_starter
+entity_type: node
+bundle: country
+label: 'Starter country'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

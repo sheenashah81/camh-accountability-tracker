@@ -1,0 +1,57 @@
+uuid: 38a1ca52-28a3-4d56-acac-e20906ccf898
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.commitment
+    - node.type.country
+    - node.type.document
+    - node.type.indicator
+    - node.type.indicator_value
+    - node.type.institution
+    - node.type.milestone
+    - node.type.progress_update
+    - workflows.workflow.commitment_review
+  module:
+    - camh_tracker
+    - content_moderation
+    - content_translation
+    - node
+    - system
+id: editor
+label: Editor
+weight: 5
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'create commitment content'
+  - 'create content translations'
+  - 'create country content'
+  - 'create document content'
+  - 'create indicator content'
+  - 'create indicator_value content'
+  - 'create institution content'
+  - 'create milestone content'
+  - 'create progress_update content'
+  - 'edit any commitment content'
+  - 'edit any country content'
+  - 'edit any document content'
+  - 'edit any indicator content'
+  - 'edit any indicator_value content'
+  - 'edit any institution content'
+  - 'edit any milestone content'
+  - 'edit any progress_update content'
+  - 'import commitments csv'
+  - 'import indicator values csv'
+  - 'translate any entity'
+  - 'update content translations'
+  - 'use commitment_review transition approve_and_publish'
+  - 'use commitment_review transition back_to_draft'
+  - 'use commitment_review transition create_new_draft'
+  - 'use commitment_review transition reject'
+  - 'use commitment_review transition submit_for_review'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view data quality report'
+  - 'view the administration theme'

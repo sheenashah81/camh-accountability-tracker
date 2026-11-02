@@ -1,0 +1,24 @@
+uuid: 83903432-9d0c-4dc7-8d61-bf6af431b7fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indicator
+    - node.type.indicator
+    - node.type.indicator_value
+id: node.indicator_value.field_indicator
+field_name: field_indicator
+entity_type: node
+bundle: indicator_value
+label: Indicator
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      indicator: indicator
+field_type: entity_reference

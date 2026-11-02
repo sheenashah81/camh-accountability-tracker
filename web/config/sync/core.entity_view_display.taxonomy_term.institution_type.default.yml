@@ -1,0 +1,32 @@
+uuid: 95bab036-4c88-4b90-9261-7c3d51bc5e46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.institution_type.field_term_code
+    - taxonomy.vocabulary.institution_type
+  module:
+    - text
+id: taxonomy_term.institution_type.default
+targetEntityType: taxonomy_term
+bundle: institution_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_term_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

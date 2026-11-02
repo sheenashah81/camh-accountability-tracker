@@ -1,0 +1,16 @@
+uuid: faeae5b2-6129-491d-b7ae-c817b36428ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.status
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.status
+target_entity_type_id: taxonomy_term
+target_bundle: status
+default_langcode: en
+language_alterable: false

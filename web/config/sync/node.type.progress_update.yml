@@ -1,0 +1,11 @@
+uuid: 9c0d1a3a-af8e-4aab-b173-d8afc9499033
+langcode: en
+status: true
+dependencies: {  }
+name: 'Progress update'
+type: progress_update
+description: 'A dated status report on a commitment. Publishing it sets the commitment status.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

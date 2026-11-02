@@ -1,0 +1,23 @@
+uuid: c7b46f46-9751-4337-9001-d5e3fdb22bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_illustrative
+    - node.type.milestone
+id: node.milestone.field_is_illustrative
+field_name: field_is_illustrative
+entity_type: node
+bundle: milestone
+label: 'Illustrative record'
+description: 'Milestone progress is illustrative unless a public report supports it.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Illustrative
+  off_label: Real
+field_type: boolean

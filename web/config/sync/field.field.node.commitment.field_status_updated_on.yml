@@ -1,0 +1,21 @@
+uuid: 6d1a9417-f0cb-4d61-abf6-4453fd9b87e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_updated_on
+    - node.type.commitment
+  module:
+    - datetime
+id: node.commitment.field_status_updated_on
+field_name: field_status_updated_on
+entity_type: node
+bundle: commitment
+label: 'Status last updated on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

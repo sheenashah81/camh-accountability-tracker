@@ -1,0 +1,23 @@
+uuid: 6bbdd952-228d-4845-b7ee-7a51e0181f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.commitment
+  module:
+    - node
+id: node_commitment
+label: Commitment
+type: 'canonical_entities:node'
+pattern: '/commitments/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      commitment: commitment
+selection_logic: and
+weight: 0
+relationships: {  }

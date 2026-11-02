@@ -1,0 +1,23 @@
+uuid: 19d81b1b-e1e7-4883-8e17-db6a6d93df32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_es_review_status
+    - node.type.commitment
+  module:
+    - options
+id: node.commitment.field_es_review_status
+field_name: field_es_review_status
+entity_type: node
+bundle: commitment
+label: 'Spanish text review status'
+description: 'Spanish text is shown as pending human review until set to Reviewed.'
+required: false
+translatable: false
+default_value:
+  -
+    value: pending
+default_value_callback: ''
+settings: {  }
+field_type: list_string

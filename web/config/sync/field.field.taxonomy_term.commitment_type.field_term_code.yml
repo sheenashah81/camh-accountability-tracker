@@ -1,0 +1,19 @@
+uuid: b9e4261a-59db-40ba-9bff-da259c177039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_term_code
+    - taxonomy.vocabulary.commitment_type
+id: taxonomy_term.commitment_type.field_term_code
+field_name: field_term_code
+entity_type: taxonomy_term
+bundle: commitment_type
+label: 'Term code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

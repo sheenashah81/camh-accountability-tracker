@@ -1,0 +1,24 @@
+uuid: 8df9e157-ca37-44f4-af8d-88a456d10d3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commitment
+    - node.type.commitment
+    - node.type.progress_update
+id: node.progress_update.field_commitment
+field_name: field_commitment
+entity_type: node
+bundle: progress_update
+label: Commitment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      commitment: commitment
+field_type: entity_reference

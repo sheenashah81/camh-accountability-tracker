@@ -1,0 +1,23 @@
+uuid: e12976d8-de62-47b3-9285-bd6e274e215e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_illustrative
+    - node.type.commitment
+id: node.commitment.field_is_illustrative
+field_name: field_is_illustrative
+entity_type: node
+bundle: commitment
+label: 'Illustrative record'
+description: 'Tick only for records added to demonstrate workflows. They show an Illustrative tag on screen.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Illustrative
+  off_label: Real
+field_type: boolean

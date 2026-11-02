@@ -1,0 +1,32 @@
+uuid: aab79f39-bb41-48da-afec-f30cd11b7d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.region.field_term_code
+    - taxonomy.vocabulary.region
+  module:
+    - text
+id: taxonomy_term.region.default
+targetEntityType: taxonomy_term
+bundle: region
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_term_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

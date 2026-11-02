@@ -1,0 +1,22 @@
+uuid: 4832a766-f95e-4e38-834f-9e423d68583d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_verification_note
+    - node.type.commitment
+  module:
+    - text
+id: node.commitment.field_verification_note
+field_name: field_verification_note
+entity_type: node
+bundle: commitment
+label: 'Verification note (internal)'
+description: 'What is still to be checked. Not shown publicly.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

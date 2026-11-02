@@ -1,0 +1,32 @@
+camh_tracker.data:
+  title: 'Data'
+  route_name: camh_tracker.data
+  menu_name: main
+  weight: 5
+
+camh_tracker.indicators:
+  title: 'Indicators'
+  route_name: camh_tracker.indicators
+  menu_name: main
+  weight: 2
+
+camh_tracker.import_commitments:
+  title: 'Import commitments (CSV)'
+  description: 'Upload a CSV of commitments, check it and load the valid rows as Drafts.'
+  route_name: camh_tracker.import_commitments
+  parent: system.admin_content
+  weight: 20
+
+camh_tracker.data_quality:
+  title: 'Data-quality report'
+  description: 'Commitment records that are missing information or waiting for checks.'
+  route_name: camh_tracker.data_quality
+  parent: system.admin_reports
+  weight: 20
+
+camh_tracker.import_indicator_values:
+  title: 'Import indicator values (CSV)'
+  description: 'Upload a CSV of indicator values, check it and load the valid rows unpublished.'
+  route_name: camh_tracker.import_indicator_values
+  parent: system.admin_content
+  weight: 21

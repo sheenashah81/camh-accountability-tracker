@@ -1,0 +1,386 @@
+# Spanish translation of the CAMH Tracker rules module.
+# AI-assisted (2026-10-28); reviewed by a person (2026-11-01).
+msgid ""
+msgstr ""
+"Project-Id-Version: camh_tracker 1.0\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Illustrative record. It was added to show how the tracker works and is not an official government commitment."
+msgstr "Registro ilustrativo. Se añadió para mostrar cómo funciona el seguimiento y no es un compromiso oficial de ningún gobierno."
+
+msgid "No recent update. The status was last updated on @date, more than 12 months ago."
+msgstr "Sin actualización reciente. El estado se actualizó por última vez el @date, hace más de 12 meses."
+
+msgid "This record is not published. It is only visible to people who can review it."
+msgstr "Este registro no está publicado. Solo lo ven las personas que pueden revisarlo."
+
+msgid "The Spanish text is AI-assisted and pending human review."
+msgstr "El texto en español se ha elaborado con ayuda de IA y está pendiente de revisión humana."
+
+msgid "Evidence (@host)"
+msgstr "Evidencia (@host)"
+
+msgid "Illustrative"
+msgstr "Ilustrativo"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Summary"
+msgstr "Resumen"
+
+msgid "Source"
+msgstr "Fuente"
+
+msgid "Record type"
+msgstr "Tipo de registro"
+
+msgid "Progress updates"
+msgstr "Actualizaciones de progreso"
+
+msgid "Published progress updates, newest first"
+msgstr "Actualizaciones de progreso publicadas, de la más reciente a la más antigua"
+
+msgid "No progress updates have been published yet."
+msgstr "Todavía no se ha publicado ninguna actualización de progreso."
+
+msgid "Milestone"
+msgstr "Hito"
+
+msgid "Due"
+msgstr "Vencimiento"
+
+msgid "Completed on"
+msgstr "Completado el"
+
+msgid "Milestones and timeline"
+msgstr "Hitos y calendario"
+
+msgid "Milestones in date order"
+msgstr "Hitos por orden de fecha"
+
+msgid "No milestones have been recorded for this commitment."
+msgstr "No se ha registrado ningún hito para este compromiso."
+
+msgid "Source (opens the publisher's site)"
+msgstr "Fuente (abre el sitio del editor)"
+
+msgid "Licence"
+msgstr "Licencia"
+
+msgid "Not recorded"
+msgstr "No registrada"
+
+msgid "Source checked on"
+msgstr "Fuente comprobada el"
+
+msgid "Record last updated"
+msgstr "Registro actualizado por última vez el"
+
+msgid "Source and licence"
+msgstr "Fuente y licencia"
+
+msgid "Commitments in this country"
+msgstr "Compromisos en este país"
+
+msgid "Published commitments"
+msgstr "Compromisos publicados"
+
+msgid "Commitment"
+msgstr "Compromiso"
+
+msgid "Last updated"
+msgstr "Última actualización"
+
+msgid "No commitments have been published for this country yet."
+msgstr "Todavía no se ha publicado ningún compromiso para este país."
+
+msgid "Indicators"
+msgstr "Indicadores"
+
+msgid "Latest available value for each indicator"
+msgstr "Último valor disponible de cada indicador"
+
+msgid "Indicator"
+msgstr "Indicador"
+
+msgid "Latest year"
+msgstr "Último año"
+
+msgid "Latest value"
+msgstr "Último valor"
+
+msgid "Earliest in series"
+msgstr "Primer valor de la serie"
+
+msgid "Unit"
+msgstr "Unidad"
+
+msgid "No indicator data is available for this country."
+msgstr "No hay datos de indicadores para este país."
+
+msgid "Trends over time"
+msgstr "Tendencias a lo largo del tiempo"
+
+msgid "Line chart: @name in @country, @y1 to @y2. It goes from @v1 to @v2 (@unit). The data table below has every value."
+msgstr "Gráfico de líneas: @name en @country, de @y1 a @y2. Pasa de @v1 a @v2 (@unit). La tabla de datos de abajo contiene todos los valores."
+
+msgid "Loading chart..."
+msgstr "Cargando el gráfico..."
+
+msgid "Data table: @name"
+msgstr "Tabla de datos: @name"
+
+msgid "Year"
+msgstr "Año"
+
+msgid "Value (@unit)"
+msgstr "Valor (@unit)"
+
+msgid "Data sources"
+msgstr "Fuentes de datos"
+
+msgid "No data available for this chart."
+msgstr "No hay datos disponibles para este gráfico."
+
+msgid "The chart could not be loaded. The data table below has the same values."
+msgstr "No se pudo cargar el gráfico. La tabla de datos de abajo contiene los mismos valores."
+
+msgid "Overview"
+msgstr "Resumen"
+
+msgid "Countries tracked"
+msgstr "Países en seguimiento"
+
+msgid "Starter countries chosen for this prototype"
+msgstr "Países de partida elegidos para este prototipo"
+
+msgid "Each one links to its public source"
+msgstr "Cada uno enlaza con su fuente pública"
+
+msgid "Records in preparation"
+msgstr "Registros en preparación"
+
+msgid "Drafts waiting for review, a licence check or a status assessment"
+msgstr "Borradores a la espera de revisión, de comprobar la licencia o de evaluar el estado"
+
+msgid "Indicator data points"
+msgstr "Datos de indicadores"
+
+msgid "Years @a to @b, from the World Bank"
+msgstr "Años @a a @b, del Banco Mundial"
+
+msgid "Key figures"
+msgstr "Cifras clave"
+
+msgid "Where the tracker has data"
+msgstr "Dónde tiene datos el seguimiento"
+
+msgid "Has a published commitment"
+msgstr "Tiene un compromiso publicado"
+
+msgid "Tracked, none published yet"
+msgstr "En seguimiento, ninguno publicado aún"
+
+msgid "Not tracked"
+msgstr "Sin seguimiento"
+
+msgid "Country outlines: Natural Earth (public domain). Borders are generalised and imply no opinion on legal status. The table below has the same information as the map."
+msgstr "Contornos de los países: Natural Earth (dominio público). Las fronteras están generalizadas y no expresan ninguna opinión sobre su estatus jurídico. La tabla de abajo contiene la misma información que el mapa."
+
+msgid "Countries at a glance"
+msgstr "Los países de un vistazo"
+
+msgid "Tracked countries"
+msgstr "Países en seguimiento"
+
+msgid "Region"
+msgstr "Región"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Progress summary"
+msgstr "Resumen del progreso"
+
+msgid "Published commitments by status"
+msgstr "Compromisos publicados por estado"
+
+msgid "Only published commitments are counted. Statuses are assessed from public sources, not from opinion."
+msgstr "Solo se cuentan los compromisos publicados. Los estados se evalúan a partir de fuentes públicas, no de opiniones."
+
+msgid "Recent updates"
+msgstr "Actualizaciones recientes"
+
+msgid "Latest published progress updates"
+msgstr "Últimas actualizaciones de progreso publicadas"
+
+msgid "Map of the world. @n countries are tracked; @p have a published commitment. The table below lists the same countries."
+msgstr "Mapa del mundo. Se hace seguimiento de @n países; @p tienen un compromiso publicado. La tabla de abajo enumera los mismos países."
+
+msgid "A prototype tracker of public commitments on child and adolescent mental health (CAMH), with context indicators. Every record shows its source and licence."
+msgstr "Un prototipo de seguimiento de compromisos públicos sobre la salud mental de niños y adolescentes, con indicadores de contexto. Cada registro muestra su fuente y su licencia."
+
+msgid "published commitments"
+msgstr "compromisos publicados"
+
+msgid "No published commitments yet"
+msgstr "Aún no hay compromisos publicados"
+
+msgid "Open the country page"
+msgstr "Abrir la página del país"
+
+msgid "Large dark marker: has a published commitment"
+msgstr "Marcador grande y oscuro: tiene un compromiso publicado"
+
+msgid "Small light marker: tracked, none published yet"
+msgstr "Marcador pequeño y claro: en seguimiento, ninguno publicado aún"
+
+msgid "Active filters"
+msgstr "Filtros activos"
+
+msgid "Remove filter @label: @value"
+msgstr "Quitar el filtro @label: @value"
+
+msgid "Choose how to see the results"
+msgstr "Elija cómo ver los resultados"
+
+msgid "Table"
+msgstr "Tabla"
+
+msgid "Map"
+msgstr "Mapa"
+
+msgid "Map of the countries in the current results. The table view lists the same commitments."
+msgstr "Mapa de los países de los resultados actuales. La vista de tabla enumera los mismos compromisos."
+
+msgid "commitments in these results"
+msgstr "compromisos en estos resultados"
+
+msgid "1 commitment matches the filters."
+msgstr "1 compromiso coincide con los filtros."
+
+msgid "Year made or adopted"
+msgstr "Año de adopción"
+
+msgid "Data"
+msgstr "Datos"
+
+msgid "Dataset"
+msgstr "Conjunto de datos"
+
+msgid "Datasets"
+msgstr "Conjuntos de datos"
+
+msgid "Records"
+msgstr "Registros"
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Commitments"
+msgstr "Compromisos"
+
+msgid "Indicator values"
+msgstr "Valores de indicadores"
+
+msgid "Published commitments with their institution, status, dates, source, licence and the date the source was checked."
+msgstr "Compromisos publicados con su institución, estado, fechas, fuente, licencia y la fecha en que se comprobó la fuente."
+
+msgid "Yearly values of each indicator by country, with unit, source, licence and the date retrieved."
+msgstr "Valores anuales de cada indicador por país, con unidad, fuente, licencia y fecha de obtención."
+
+msgid "Download the published data as CSV (opens in a spreadsheet) or JSON (for programs). Only published records are included, in the language of this page."
+msgstr "Descargue los datos publicados en CSV (se abre en una hoja de cálculo) o en JSON (para programas). Solo se incluyen los registros publicados, en el idioma de esta página."
+
+msgid "Licences and attribution"
+msgstr "Licencias y atribución"
+
+msgid "Every row names its source and licence. Indicator values come from the World Bank under CC BY 4.0: credit the World Bank and the original source (WHO, UN Population Division). Commitment rows summarise public documents in our own words; reuse of the underlying documents follows each source's licence, and some sources allow non-commercial use only. Check the licence column before reusing a row."
+msgstr "Cada fila indica su fuente y su licencia. Los valores de los indicadores proceden del Banco Mundial con licencia CC BY 4.0: cite al Banco Mundial y a la fuente original (OMS, División de Población de la ONU). Las filas de compromisos resumen documentos públicos con nuestras propias palabras; la reutilización de los documentos originales sigue la licencia de cada fuente, y algunas fuentes solo permiten el uso no comercial. Compruebe la columna de licencia antes de reutilizar una fila."
+
+msgid "Programming interface"
+msgstr "Interfaz de programación"
+
+msgid "A read-only JSON:API is available at /jsonapi for published records. It cannot be used to change data."
+msgstr "Hay una API JSON:API de solo lectura en /jsonapi para los registros publicados. No sirve para modificar datos."
+
+msgid "Records still in draft are not included. Spanish text is AI-assisted and has been reviewed by a person."
+msgstr "Los registros que aún son borradores no se incluyen. El texto en español se ha elaborado con ayuda de IA y ha sido revisado por una persona."
+
+msgid "Bar chart: latest @name by country, from @low (@lc) to @high (@hc) @unit. The table below lists every value."
+msgstr "Gráfico de barras: último valor de @name por país, desde @low (@lc) hasta @high (@hc) @unit. La tabla de abajo enumera todos los valores."
+
+msgid "Latest value by country (@unit)"
+msgstr "Último valor por país (@unit)"
+
+msgid "Source: @s. Licence: @l. Retrieved @d."
+msgstr "Fuente: @s. Licencia: @l. Obtenido el @d."
+
+msgid "Values are the latest year available for each country; open a country page to see the full trend."
+msgstr "Los valores son los del último año disponible de cada país; abra la página de un país para ver toda la tendencia."
+
+msgid "Context indicators from public datasets, compared across the countries this prototype tracks. They show the setting commitments are made in; they are not measures of whether a commitment is working."
+msgstr "Indicadores de contexto de conjuntos de datos públicos, comparados entre los países que sigue este prototipo. Muestran el entorno en el que se adoptan los compromisos; no miden si un compromiso funciona."
+
+msgctxt "Long month name"
+msgid "January"
+msgstr "enero"
+
+msgctxt "Long month name"
+msgid "February"
+msgstr "febrero"
+
+msgctxt "Long month name"
+msgid "March"
+msgstr "marzo"
+
+msgctxt "Long month name"
+msgid "April"
+msgstr "abril"
+
+msgctxt "Long month name"
+msgid "May"
+msgstr "mayo"
+
+msgctxt "Long month name"
+msgid "June"
+msgstr "junio"
+
+msgctxt "Long month name"
+msgid "July"
+msgstr "julio"
+
+msgctxt "Long month name"
+msgid "August"
+msgstr "agosto"
+
+msgctxt "Long month name"
+msgid "September"
+msgstr "septiembre"
+
+msgctxt "Long month name"
+msgid "October"
+msgstr "octubre"
+
+msgctxt "Long month name"
+msgid "November"
+msgstr "noviembre"
+
+msgctxt "Long month name"
+msgid "December"
+msgstr "diciembre"
+
+
+msgid "Further data"
+msgstr "Más datos"
+
+msgid "Service, workforce and policy data for many countries is published in the <a href=\"@url\" rel=\"noopener\">WHO Mental Health Atlas</a> (opens WHO.int; not every country took part)."
+msgstr "Los datos sobre servicios, personal y políticas de muchos países se publican en el <a href=\"@url\" rel=\"noopener\">Atlas de Salud Mental de la OMS</a> (se abre en WHO.int; no todos los países participaron)."

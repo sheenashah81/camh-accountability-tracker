@@ -1,0 +1,11 @@
+uuid: af189ddf-ddae-4cbc-bbc6-fb48c23ba3c9
+langcode: en
+status: true
+dependencies: {  }
+name: Indicator
+type: indicator
+description: 'A measured quantity shown on the dashboard.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

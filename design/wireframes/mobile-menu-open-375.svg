@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="812" viewBox="0 0 375 812"><rect width="375" height="812" fill="#FFFFFF"/><rect x="0" y="0" width="375" height="64" rx="0" fill="#F7F8FA" stroke="none" stroke-width="1"/>
+<text x="16" y="28" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Site name</text>
+<text x="16" y="48" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">(prototype)</text>
+<rect x="289" y="10" width="70" height="44" rx="4" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2"/>
+<text x="324" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Close</text>
+<rect x="0" y="64" width="375" height="4" rx="0" fill="#1CABE2" stroke="none" stroke-width="1"/>
+<text x="20" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="17" font-weight="400" fill="#1A1A1A" text-anchor="start">Home</text>
+<line x1="0" y1="120" x2="375" y2="120" stroke="#D0D5DD"/>
+<rect x="0" y="120" width="375" height="52" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<rect x="0" y="120" width="4" height="52" rx="0" fill="#0B6E99" stroke="none" stroke-width="1"/>
+<text x="20" y="152" font-family="Noto Sans, Arial, sans-serif" font-size="17" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitments</text>
+<text x="359" y="151" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="end">Current page</text>
+<line x1="0" y1="172" x2="375" y2="172" stroke="#D0D5DD"/>
+<text x="20" y="204" font-family="Noto Sans, Arial, sans-serif" font-size="17" font-weight="400" fill="#1A1A1A" text-anchor="start">Indicators</text>
+<line x1="0" y1="224" x2="375" y2="224" stroke="#D0D5DD"/>
+<text x="20" y="256" font-family="Noto Sans, Arial, sans-serif" font-size="17" font-weight="400" fill="#1A1A1A" text-anchor="start">Countries</text>
+<line x1="0" y1="276" x2="375" y2="276" stroke="#D0D5DD"/>
+<text x="20" y="308" font-family="Noto Sans, Arial, sans-serif" font-size="17" font-weight="400" fill="#1A1A1A" text-anchor="start">Data</text>
+<line x1="0" y1="328" x2="375" y2="328" stroke="#D0D5DD"/>
+<text x="20" y="362" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#595959" text-anchor="start">Language</text>
+<rect x="16" y="376" width="165" height="48" rx="4" fill="#FFFFFF" stroke="#0B6E99" stroke-width="2"/>
+<text x="98" y="407" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B6E99" text-anchor="middle">English</text>
+<rect x="194" y="376" width="165" height="48" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="276" y="407" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="middle">Spanish</text>
+<rect x="0" y="448" width="375" height="3" rx="0" fill="#D0D5DD" stroke="none" stroke-width="1"/>
+<text x="16" y="478" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Page content is pushed down, not covered.</text>
+<text x="16" y="498" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Design intent: closes on Close or Esc; focus returns to the button.</text>
+<rect x="16" y="524" width="220" height="22" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="16" y="568" width="343" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="16" y="588" width="343" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="16" y="608" width="200" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/></svg>

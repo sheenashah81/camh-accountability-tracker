@@ -1,0 +1,22 @@
+uuid: 3e4dfd1f-4137-4f17-8435-e57f7d19f0fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_definition
+    - node.type.indicator
+  module:
+    - text
+id: node.indicator.field_definition
+field_name: field_definition
+entity_type: node
+bundle: indicator
+label: Definition
+description: 'Plain-language definition.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

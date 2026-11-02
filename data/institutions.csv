@@ -1,0 +1,9 @@
+code,name_en,name_es,country_iso3,institution_type,website,es_review_status,notes
+KEN-MOH,Ministry of Health (Kenya),Ministerio de Salud (Kenia),KEN,Ministry,,Reviewed by a person,
+NGA-FMOH,Federal Ministry of Health (Nigeria),Ministerio Federal de Salud (Nigeria),NGA,Ministry,,Reviewed by a person,Current official name of the ministry to be confirmed
+ZAF-NDOH,National Department of Health (South Africa),Departamento Nacional de Salud (Sudáfrica),ZAF,Ministry,https://www.health.gov.za,Reviewed by a person,
+BGD-MOHFW,Ministry of Health and Family Welfare (Bangladesh),Ministerio de Salud y Bienestar Familiar (Bangladés),BGD,Ministry,,Reviewed by a person,
+PHL-CONGRESS,Congress of the Philippines,Congreso de Filipinas,PHL,Parliament,,Reviewed by a person,Enacting body of the law; the Department of Health is the main implementing agency (to add if needed)
+COL-CONGRESO,Congress of the Republic of Colombia,Congreso de la República de Colombia,COL,Parliament,,Reviewed by a person,
+JOR-MOH,Ministry of Health (Jordan),Ministerio de Salud (Jordania),JOR,Ministry,https://www.moh.gov.jo,Reviewed by a person,
+GBR-DHSC,Department of Health and Social Care (England),Departamento de Salud y Asistencia Social (Inglaterra),GBR,Ministry,,Reviewed by a person,Joint lead with the Department for Education on the 2018 Green Paper response

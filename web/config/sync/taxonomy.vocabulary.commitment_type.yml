@@ -1,0 +1,9 @@
+uuid: f0575283-fac0-440d-8c6e-ea59982bd610
+langcode: en
+status: true
+dependencies: {  }
+name: 'Commitment type'
+vid: commitment_type
+description: null
+weight: 0
+new_revision: false

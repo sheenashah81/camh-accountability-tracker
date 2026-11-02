@@ -1,0 +1,24 @@
+uuid: 7ba01437-81cb-4eed-a8f7-e09f3eaa6403
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_licence
+    - node.type.document
+    - taxonomy.vocabulary.licence
+id: node.document.field_licence
+field_name: field_licence
+entity_type: node
+bundle: document
+label: Licence
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licence: licence
+field_type: entity_reference

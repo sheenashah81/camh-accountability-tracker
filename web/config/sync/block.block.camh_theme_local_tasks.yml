@@ -1,0 +1,20 @@
+uuid: 27188898-cee3-4821-bc50-6244503214fb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camh_theme
+id: camh_theme_local_tasks
+theme: camh_theme
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Local tasks'
+  label_display: ''
+  provider: system
+  primary: true
+  secondary: true
+visibility: {  }

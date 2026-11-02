@@ -1,0 +1,13 @@
+import commitments csv:
+  title: 'Import commitments from a CSV file'
+  description: 'Upload a CSV of commitments, check it for errors and load the valid rows as Drafts.'
+  restrict access: true
+
+view data quality report:
+  title: 'View the data-quality report'
+  description: 'See which commitment records are missing information or are waiting for checks.'
+
+import indicator values csv:
+  title: 'Import indicator values from a CSV file'
+  description: 'Upload a CSV of indicator values, check it and load the valid rows unpublished for review.'
+  restrict access: true

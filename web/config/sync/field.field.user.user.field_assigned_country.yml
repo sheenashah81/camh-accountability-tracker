@@ -1,0 +1,25 @@
+uuid: 2d47fdfb-20e0-4f8b-93ce-77d8ddd2d68d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_assigned_country
+    - node.type.country
+  module:
+    - user
+id: user.user.field_assigned_country
+field_name: field_assigned_country
+entity_type: user
+bundle: user
+label: 'Assigned country'
+description: 'Contributors can create and edit records only for this country.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      country: country
+field_type: entity_reference

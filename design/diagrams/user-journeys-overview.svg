@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="880" viewBox="0 0 1280 880"><rect width="1280" height="880" fill="#FFFFFF"/><text x="40" y="48" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">User journeys: three audiences</text>
+<text x="40" y="74" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Personas are assumptions, not research. Steps match docs/user-journeys.md; status shows what is built.</text>
+<text x="40" y="130" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">1  Public user finds a commitment</text>
+<text x="40" y="154" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Journalist, mobile. Goal: find the status and source in two minutes.</text>
+<rect x="40" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="132.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Open home</text>
+<text x="132.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Overview, map</text>
+<path d="M224 200 L242 200" stroke="#595959" stroke-width="2"/><path d="M238 195 L244 200 L238 205" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="244" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="336.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Choose Kenya</text>
+<text x="336.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Country profile</text>
+<path d="M428 200 L446 200" stroke="#595959" stroke-width="2"/><path d="M442 195 L448 200 L442 205" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="448" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="540.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Filter</text>
+<text x="540.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Theme and status</text>
+<path d="M632 200 L650 200" stroke="#595959" stroke-width="2"/><path d="M646 195 L652 200 L646 205" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="652" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="744.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Open commitment</text>
+<text x="744.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Status, sources</text>
+<path d="M836 200 L854 200" stroke="#595959" stroke-width="2"/><path d="M850 195 L856 200 L850 205" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="856" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="948.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Read chart</text>
+<text x="948.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">With table</text>
+<path d="M1040 200 L1058 200" stroke="#595959" stroke-width="2"/><path d="M1054 195 L1060 200 L1054 205" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="1060" y="172" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="1152.0" y="196" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Download data</text>
+<text x="1152.0" y="216" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">CSV, JSON; ES at /es</text>
+<text x="40" y="256" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">All steps built</text>
+<text x="40" y="370" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">2  Contributor submits an update</text>
+<text x="40" y="394" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Ministry focal point, laptop. Goal: an accurate update, ready for review.</text>
+<rect x="40" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="132.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Log in</text>
+<text x="132.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Own records</text>
+<path d="M224 440 L242 440" stroke="#595959" stroke-width="2"/><path d="M238 435 L244 440 L238 445" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="244" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="336.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Open commitment</text>
+<text x="336.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Edit form</text>
+<path d="M428 440 L446 440" stroke="#595959" stroke-width="2"/><path d="M442 435 L448 440 L442 445" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="448" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="540.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Fill in form</text>
+<text x="540.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Inline help</text>
+<path d="M632 440 L650 440" stroke="#595959" stroke-width="2"/><path d="M646 435 L652 440 L646 445" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="652" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="744.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Submit</text>
+<text x="744.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Validation</text>
+<path d="M836 440 L854 440" stroke="#595959" stroke-width="2"/><path d="M850 435 L856 440 L850 445" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="856" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="948.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Confirmation</text>
+<text x="948.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">State: In review</text>
+<path d="M1040 440 L1058 440" stroke="#595959" stroke-width="2"/><path d="M1054 435 L1060 440 L1054 445" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="1060" y="412" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="1152.0" y="436" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Check outcome</text>
+<text x="1152.0" y="456" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Published or rejected</text>
+<text x="40" y="496" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Built with Drupal forms and moderation</text>
+<text x="40" y="610" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">3  Administrator reviews and publishes</text>
+<text x="40" y="634" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">UN office or platform reviewer. Goal: trustworthy, sourced data.</text>
+<rect x="40" y="652" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="132.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Open queue</text>
+<text x="132.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Content list</text>
+<path d="M224 680 L242 680" stroke="#595959" stroke-width="2"/><path d="M238 675 L244 680 L238 685" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="244" y="652" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="336.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Open record</text>
+<text x="336.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Sources shown</text>
+<path d="M428 680 L446 680" stroke="#595959" stroke-width="2"/><path d="M442 675 L448 680 L442 685" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="448" y="652" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="540.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Approve or reject</text>
+<text x="540.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Comment</text>
+<path d="M632 680 L650 680" stroke="#595959" stroke-width="2"/><path d="M646 675 L652 680 L646 685" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="652" y="652" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#595959" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="744.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#595959" text-anchor="middle">Quality report</text>
+<text x="744.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Roadmap</text>
+<path d="M836 680 L854 680" stroke="#595959" stroke-width="2"/><path d="M850 675 L856 680 L850 685" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="856" y="652" width="184" height="56" rx="6" fill="#FFFFFF" stroke="#595959" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="948.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#595959" text-anchor="middle">CSV import</text>
+<text x="948.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Scripts, not a screen</text>
+<path d="M1040 680 L1058 680" stroke="#595959" stroke-width="2"/><path d="M1054 675 L1060 680 L1054 685" fill="none" stroke="#595959" stroke-width="2"/>
+<rect x="1060" y="652" width="184" height="56" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="1152.0" y="676" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Change history</text>
+<text x="1152.0" y="696" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Revision log</text>
+<text x="40" y="736" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Partly built; quality report and import screen are roadmap</text>
+<text x="40" y="840" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Shared patterns to reuse: loading, empty, error with recovery, validation summary, success message, untranslated notice, illustrative label.</text></svg>

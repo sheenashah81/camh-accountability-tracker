@@ -1,0 +1,23 @@
+uuid: 9c112250-77da-4731-befb-54fda5f6d4db
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bba3a4a8-d7ee-4313-9e59-743ca8c9bac0'
+  module:
+    - block_content
+  theme:
+    - camh_theme
+id: camh_theme_footer_disclaimer
+theme: camh_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:bba3a4a8-d7ee-4313-9e59-743ca8c9bac0'
+settings:
+  id: 'block_content:bba3a4a8-d7ee-4313-9e59-743ca8c9bac0'
+  label: 'Footer disclaimer'
+  label_display: ''
+  provider: system
+  view_mode: full
+visibility: {  }

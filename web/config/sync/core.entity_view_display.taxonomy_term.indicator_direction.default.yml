@@ -1,0 +1,32 @@
+uuid: 7bb99866-ee64-4d24-87dd-444e88fc20c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.indicator_direction.field_term_code
+    - taxonomy.vocabulary.indicator_direction
+  module:
+    - text
+id: taxonomy_term.indicator_direction.default
+targetEntityType: taxonomy_term
+bundle: indicator_direction
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_term_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

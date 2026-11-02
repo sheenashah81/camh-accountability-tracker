@@ -1,0 +1,21 @@
+uuid: 87b64ed0-10d7-41a3-815a-069fc8b9fc0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_completed_on
+    - node.type.milestone
+  module:
+    - datetime
+id: node.milestone.field_completed_on
+field_name: field_completed_on
+entity_type: node
+bundle: milestone
+label: 'Completed on'
+description: 'Not before the commitment date and not in the future.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,20 @@
+uuid: 8cc3f4e3-96b6-4d53-8b4d-9b5fde4248b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camh_theme
+id: camh_theme_main_content
+theme: camh_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main content'
+  label_display: ''
+  provider: system
+visibility: {  }

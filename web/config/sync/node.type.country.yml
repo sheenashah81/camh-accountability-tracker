@@ -1,0 +1,11 @@
+uuid: 6652641d-27a7-45e2-8a1c-01fae605b3ba
+langcode: en
+status: true
+dependencies: {  }
+name: Country
+type: country
+description: 'One of the eight starter countries.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

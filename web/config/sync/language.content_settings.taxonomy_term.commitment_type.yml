@@ -1,0 +1,16 @@
+uuid: 7e33b5b2-8f8f-4cfd-b2b2-7b55096c612d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.commitment_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.commitment_type
+target_entity_type_id: taxonomy_term
+target_bundle: commitment_type
+default_langcode: en
+language_alterable: false

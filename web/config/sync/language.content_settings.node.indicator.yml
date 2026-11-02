@@ -1,0 +1,16 @@
+uuid: fb81ce4e-5b08-4d00-9cd6-56a20885c392
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.indicator
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.indicator
+target_entity_type_id: node
+target_bundle: indicator
+default_langcode: en
+language_alterable: false

@@ -1,0 +1,51 @@
+uuid: 9b57740b-5db5-4c90-9ad4-6c45022a726f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.country.field_is_starter
+    - field.field.node.country.field_iso3
+    - field.field.node.country.field_region
+    - field.field.node.country.field_summary
+    - node.type.country
+  module:
+    - text
+id: node.country.default
+targetEntityType: node
+bundle: country
+mode: default
+content:
+  country_commitments:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  country_indicators:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_is_starter: true
+  field_iso3: true
+  langcode: true

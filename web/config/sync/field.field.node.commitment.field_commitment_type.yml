@@ -1,0 +1,24 @@
+uuid: ce97cd75-dc14-49ee-acff-6d07c556c8fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commitment_type
+    - node.type.commitment
+    - taxonomy.vocabulary.commitment_type
+id: node.commitment.field_commitment_type
+field_name: field_commitment_type
+entity_type: node
+bundle: commitment
+label: 'Commitment type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      commitment_type: commitment_type
+field_type: entity_reference

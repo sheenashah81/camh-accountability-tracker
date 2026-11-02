@@ -1,0 +1,77 @@
+uuid: 3adae6cb-303b-46dc-befc-537cd60b9f02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.indicator.field_age_group
+    - field.field.node.indicator.field_code
+    - field.field.node.indicator.field_definition
+    - field.field.node.indicator.field_direction
+    - field.field.node.indicator.field_theme
+    - field.field.node.indicator.field_unit
+    - node.type.indicator
+  module:
+    - text
+    - user
+id: node.indicator.default
+targetEntityType: node
+bundle: indicator
+mode: default
+content:
+  field_age_group:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_definition:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_direction:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_unit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

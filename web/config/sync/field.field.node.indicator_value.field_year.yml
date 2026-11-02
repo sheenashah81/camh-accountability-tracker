@@ -1,0 +1,23 @@
+uuid: 3a8f690f-4ea3-4d6f-a780-0c6267067440
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.indicator_value
+id: node.indicator_value.field_year
+field_name: field_year
+entity_type: node
+bundle: indicator_value
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1990
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,21 @@
+uuid: bee12953-ad88-4277-b2e7-2200b4c87260
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_date
+    - node.type.commitment
+  module:
+    - datetime
+id: node.commitment.field_target_date
+field_name: field_target_date
+entity_type: node
+bundle: commitment
+label: 'Target date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

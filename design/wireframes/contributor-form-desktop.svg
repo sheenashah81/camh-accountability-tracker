@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="2256" viewBox="0 0 1280 2256"><rect width="1280" height="2256" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="64" rx="0" fill="#F7F8FA" stroke="none" stroke-width="1"/>
+<text x="90" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="start">Site name</text>
+<text x="640" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Home</text>
+<text x="710" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Commitments</text>
+<text x="860" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Countries</text>
+<text x="950" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Data</text>
+<text x="1050" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">English</text>
+<text x="1130" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Spanish</text>
+<rect x="0" y="64" width="1280" height="4" rx="0" fill="#1CABE2" stroke="none" stroke-width="1"/>
+<text x="90" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Home</text>
+<line x1="90" y1="103" x2="122" y2="103" stroke="#0B6E99"/>
+<text x="150" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#595959" text-anchor="start">/</text>
+<text x="165" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">My drafts</text>
+<line x1="165" y1="103" x2="237" y2="103" stroke="#0B6E99"/>
+<text x="90" y="150" font-family="Noto Sans, Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start">Add a commitment (H1)</text>
+<text x="90" y="182" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#595959" text-anchor="start">Complete every required field. Save a draft at any time; submit for review when the source is attached.</text>
+<rect x="90" y="206" width="720" height="92" rx="0" fill="#FFFFFF" stroke="#B42318" stroke-width="3"/>
+<text x="110" y="234" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#B42318" text-anchor="start">There is a problem</text>
+<text x="110" y="260" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#0B6E99" text-anchor="start">Source URL must start with https://</text>
+<line x1="110" y1="263" x2="372" y2="263" stroke="#0B6E99"/>
+<text x="110" y="282" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#0B6E99" text-anchor="start">Choose a country</text>
+<line x1="110" y1="285" x2="230" y2="285" stroke="#0B6E99"/>
+<text x="830" y="234" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Error summary: shown above the form after a failed save,</text>
+<text x="830" y="252" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">focus moves to it; each item links to its field.</text>
+<text x="90" y="346" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Title (required)</text>
+<text x="90" y="368" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">A short, specific name: what was committed, country and plan.</text>
+<rect x="90" y="378" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="466" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Country (required)</text>
+<rect x="90" y="474" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="780" y="501.0" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">▾</text>
+<text x="90" y="562" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Institution (required)</text>
+<text x="90" y="584" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">The body that made the commitment.</text>
+<rect x="90" y="594" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="780" y="621.0" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">▾</text>
+<text x="90" y="682" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitment type (required)</text>
+<rect x="90" y="690" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="780" y="717.0" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">▾</text>
+<text x="90" y="778" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Theme</text>
+<text x="90" y="800" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Select all that apply.</text>
+<rect x="90" y="814" width="24" height="24" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="126" y="832" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Theme option</text>
+<rect x="90" y="850" width="24" height="24" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="126" y="868" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Theme option</text>
+<rect x="90" y="886" width="24" height="24" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="126" y="904" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Theme option</text>
+<text x="90" y="954" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Description (required)</text>
+<text x="90" y="976" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">What was promised, the target and any limits (for example, applies to one nation only).</text>
+<rect x="90" y="986" width="720" height="140" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="1170" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Date made or adopted (optional)</text>
+<text x="90" y="1192" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Use the format 1 7 2025 (day month year).</text>
+<rect x="90" y="1202" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="1290" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Target date (optional)</text>
+<text x="90" y="1312" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Use the format 31 3 2030.</text>
+<rect x="90" y="1322" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="1410" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Status (required)</text>
+<text x="90" y="1432" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Choose the evidence-based status. Leave as Not yet assessed if unsure.</text>
+<rect x="90" y="1442" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="780" y="1469.0" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">▾</text>
+<rect x="74" y="1506" width="752" height="3" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="90" y="1550" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Source and licence</text>
+<text x="90" y="1590" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Source name (required)</text>
+<text x="90" y="1612" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Publisher, date and document title, for example: Ministry of Health (2025), National Plan.</text>
+<rect x="90" y="1622" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="1710" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Source URL (required)</text>
+<text x="90" y="1732" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Link to the public document. Must start with https://</text>
+<rect x="90" y="1742" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="90" y="1830" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Licence (required)</text>
+<text x="90" y="1852" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Check the publisher's licence before adding the record.</text>
+<rect x="90" y="1862" width="720" height="44" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="780" y="1889.0" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">▾</text>
+<text x="90" y="1950" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Illustrative record</text>
+<text x="90" y="1972" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Tick only if this record exists to demonstrate the workflow and is not a real commitment.</text>
+<rect x="90" y="1986" width="24" height="24" rx="4" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="126" y="2004" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">This record is illustrative</text>
+<rect x="90" y="2038" width="190" height="48" rx="4" fill="#0B6E99" stroke="#0B6E99" stroke-width="1"/>
+<text x="185" y="2068" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Save as draft</text>
+<rect x="300" y="2038" width="230" height="48" rx="4" fill="#FFFFFF" stroke="#0B6E99" stroke-width="2"/>
+<text x="415" y="2068" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#0B6E99" text-anchor="middle">Submit for review</text>
+<text x="560" y="2068" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Cancel</text>
+<line x1="560" y1="2071" x2="608" y2="2071" stroke="#0B6E99"/>
+<rect x="850" y="330" width="340" height="190" rx="4" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="870" y="362" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Before you submit</text>
+<rect x="870" y="380" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="898" y="395" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Source link opens the publisher's page</text>
+<rect x="870" y="414" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="898" y="429" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Licence is recorded</text>
+<rect x="870" y="448" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="898" y="463" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Status matches the evidence</text>
+<rect x="870" y="482" width="18" height="18" rx="3" fill="#FFFFFF" stroke="#595959" stroke-width="1.5"/>
+<text x="898" y="497" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Spanish text added or marked pending</text>
+<rect x="850" y="540" width="340" height="110" rx="4" fill="#FFF4E5" stroke="none" stroke-width="1"/>
+<rect x="850" y="540" width="4" height="110" rx="0" fill="#B35C00" stroke="none" stroke-width="1"/>
+<text x="870" y="570" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Moderation</text>
+<text x="870" y="594" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Drafts are private. Only an editor can</text>
+<text x="870" y="614" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">publish after review.</text>
+<rect x="0" y="2166" width="1280" height="90" rx="0" fill="#F7F8FA" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="2200" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Footer: independent-prototype disclaimer (no affiliation with UNICEF, WHO, DevInfo, DHIS2 or any government)</text>
+<text x="90" y="2224" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Draft-record and Spanish-text notices</text></svg>

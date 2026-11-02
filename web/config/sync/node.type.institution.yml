@@ -1,0 +1,11 @@
+uuid: da9ccaa2-a9ea-4a86-9c8d-e3063761ebca
+langcode: en
+status: true
+dependencies: {  }
+name: Institution
+type: institution
+description: 'A ministry, agency or other body responsible for a commitment.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

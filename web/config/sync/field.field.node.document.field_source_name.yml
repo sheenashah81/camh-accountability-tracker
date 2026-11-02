@@ -1,0 +1,19 @@
+uuid: 13810d46-126b-41db-b1a1-3954a1f0668e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_name
+    - node.type.document
+id: node.document.field_source_name
+field_name: field_source_name
+entity_type: node
+bundle: document
+label: 'Source name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

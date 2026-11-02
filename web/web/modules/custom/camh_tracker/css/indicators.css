@@ -1,0 +1,15 @@
+.indicator-compare { margin-bottom: 3rem; }
+.indicator-compare h2 { font-size: 1.5rem; margin: 2rem 0 0.5rem; }
+.indicator-definition-full { color: #595959; max-width: 52rem; font-size: 0.9375rem; line-height: 1.5; }
+.indicator-bars { width: 100%; }
+.indicator-bars:focus-visible { outline: 3px solid #1A1A1A; outline-offset: 2px; }
+.indicator-compare-table { max-width: 36rem; }
+.indicator-compare-table td:nth-child(n+2), .indicator-compare-table th:nth-child(n+2) { white-space: nowrap; font-variant-numeric: tabular-nums; text-align: end; }
+@media (max-width: 47.99rem) {
+  .indicator-compare-table td:nth-child(n+2) { text-align: start; }
+  .indicator-compare-table tr { display: block; border-bottom: 2px solid #D0D5DD; padding: 0.5rem 0; }
+  .indicator-compare-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .indicator-compare-table td { display: block; border: 0; padding: 0.2rem 0; }
+  .indicator-compare-table td::before { content: attr(data-label); display: block; font-size: 0.875rem; font-weight: 600; color: #595959; }
+  .indicator-compare-table td:first-child::before { display: none; }
+}

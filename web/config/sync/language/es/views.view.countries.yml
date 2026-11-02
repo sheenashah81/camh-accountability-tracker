@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      title: Países
+      header:
+        area:
+          content:
+            value: '<p>Los ocho países de partida de este prototipo. Es una selección de la autora, no una lista oficial de países prioritarios. Abra un país para ver sus compromisos e indicadores.</p>'
+      empty:
+        area_text_custom:
+          content: '<p>No hay países disponibles.</p>'
+      fields:
+        title:
+          label: País
+        name:
+          label: Región
+      style:
+        options:
+          caption: 'Países de partida, de la A a la Z'
+  page_1:
+    display_options:
+      menu:
+        title: Países

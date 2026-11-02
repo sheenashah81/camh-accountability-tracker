@@ -1,0 +1,91 @@
+uuid: 2f292973-edbc-40ee-b77d-e96c2341a749
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.progress_update.field_commitment
+    - field.field.node.progress_update.field_is_illustrative
+    - field.field.node.progress_update.field_new_status
+    - field.field.node.progress_update.field_review_comment
+    - field.field.node.progress_update.field_source_url
+    - field.field.node.progress_update.field_summary
+    - field.field.node.progress_update.field_update_date
+    - node.type.progress_update
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.progress_update.default
+targetEntityType: node
+bundle: progress_update
+mode: default
+content:
+  field_commitment:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_is_illustrative:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_new_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_review_comment:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_source_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_update_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

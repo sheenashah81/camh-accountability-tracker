@@ -1,0 +1,141 @@
+/* Interim styles for the public tracker pages. Replaced by the Bootstrap 5 sub-theme. */
+.commitment-progress h2,
+.commitment-milestones h2,
+.commitment-provenance h2,
+.country-commitments h2,
+.country-indicators h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem;
+}
+.commitment-progress table,
+.commitment-milestones table,
+.country-commitments table,
+.country-indicators table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.9375rem;
+}
+.commitment-progress caption,
+.commitment-milestones caption,
+.country-commitments caption,
+.country-indicators caption {
+  text-align: left;
+  font-weight: 600;
+  padding: 0 0 0.5rem;
+}
+.commitment-progress th, .commitment-progress td,
+.commitment-milestones th, .commitment-milestones td,
+.country-commitments th, .country-commitments td,
+.country-indicators th, .country-indicators td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid #d0d5dd;
+  overflow-wrap: anywhere;
+}
+.commitment-progress thead th,
+.commitment-milestones thead th,
+.country-commitments thead th,
+.country-indicators thead th {
+  background: #e8f6fc;
+  font-weight: 600;
+}
+/* Column widths: progress updates (date, status, summary, source). */
+.commitment-progress th:nth-child(1) { width: 13%; }
+.commitment-progress th:nth-child(2) { width: 12%; }
+.commitment-progress th:nth-child(3) { width: 55%; }
+.commitment-progress th:nth-child(4) { width: 20%; }
+.commitment-progress td:nth-child(3) { font-size: 0.875rem; line-height: 1.55; }
+/* Column widths: milestones (milestone, due, status, completed on). */
+.commitment-milestones th:nth-child(1) { width: 46%; }
+.commitment-milestones th:nth-child(2),
+.commitment-milestones th:nth-child(3),
+.commitment-milestones th:nth-child(4) { width: 18%; }
+.record-notices { border-inline-start: 4px solid #b35c00; background: #fff7ed; padding: 0.75rem 1rem; margin: 0 0 1.5rem; list-style: none; }
+.definition-list__row { display: flex; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid #d0d5dd; }
+.definition-list dt { flex: 0 0 14rem; font-weight: 600; }
+.definition-list dd { margin: 0; }
+a.external-source::after { content: " \2197"; font-size: 0.85em; }
+@media (max-width: 40rem) {
+  .definition-list__row { flex-direction: column; gap: 0.25rem; }
+  .definition-list dt { flex-basis: auto; }
+}
+.indicator-definition { font-size: 0.8125rem; line-height: 1.5; color: #595959; }
+.country-indicators h3 { font-size: 1rem; margin: 1.5rem 0 0.5rem; }
+.country-indicators th:nth-child(1) { width: 46%; }
+/* Numbers and dates stay on one line, in a steady-width digit style. */
+.commitment-progress td:nth-child(1),
+.commitment-milestones td:nth-child(2),
+.commitment-milestones td:nth-child(4),
+.country-commitments td:nth-child(3),
+.country-indicators td:nth-child(2),
+.country-indicators td:nth-child(3),
+.country-indicators td:nth-child(4),
+.views-field-changed {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.country-indicators th:nth-child(1) { width: 38%; }
+.country-indicators th:nth-child(2),
+.country-indicators th:nth-child(3) { width: 13%; }
+.country-indicators th:nth-child(4) { width: 22%; }
+.country-indicators th:nth-child(5) { width: 14%; }
+.country-indicators td:nth-child(2),
+.country-indicators td:nth-child(3),
+.country-indicators th:nth-child(2),
+.country-indicators th:nth-child(3) { text-align: end; }
+.country-commitments th:nth-child(1) { width: 60%; }
+.country-commitments th:nth-child(2) { width: 18%; }
+.country-commitments th:nth-child(3) { width: 22%; }
+.country-indicators th:nth-child(5), .country-indicators td:nth-child(5) { white-space: normal; }
+
+/* Phones: tables become stacked cards (wireframe spec); nothing scrolls sideways. */
+@media (max-width: 47.99rem) {
+  .commitment-progress table, .commitment-milestones table, .country-commitments table, .country-indicators table,
+  .view-commitments table, .view-countries table { table-layout: auto; }
+  .commitment-progress thead, .commitment-milestones thead, .country-commitments thead, .country-indicators thead,
+  .view-commitments thead, .view-countries thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .commitment-progress tr, .commitment-milestones tr, .country-commitments tr, .country-indicators tr,
+  .view-commitments tbody tr, .view-countries tbody tr { display: block; border-bottom: 2px solid #d0d5dd; padding: 0.75rem 0; }
+  .commitment-progress td, .commitment-milestones td, .country-commitments td, .country-indicators td,
+  .view-commitments td, .view-countries td { display: block; border: 0; padding: 0.25rem 0; width: auto !important; white-space: normal !important; text-align: start !important; }
+  .commitment-progress td::before, .commitment-milestones td::before, .country-commitments td::before, .country-indicators td::before,
+  .view-commitments td::before, .view-countries td::before { content: attr(data-label); display: block; font-size: 0.875rem; font-weight: 600; color: #595959; }
+  .commitment-progress td:first-child::before, .commitment-milestones td:first-child::before, .country-commitments td:first-child::before,
+  .view-commitments td:first-child::before, .view-countries td:first-child::before { display: none; }
+  .country-indicators td:first-child::before { display: none; }
+  /* The list shows title, country, status and date only; institution and theme are on the detail page. */
+  .view-commitments td.views-field-title-2, .view-commitments td.views-field-field-theme { display: none; }
+  .definition-list__row { display: block; }
+}
+
+/* Columns fit their content: status badges, dates and numbers are never wider than their cell. */
+.commitment-progress table, .commitment-milestones table, .country-commitments table, .country-indicators table, .overview-recent table, .overview-countries table {
+  table-layout: auto;
+}
+.commitment-progress th:nth-child(n), .commitment-milestones th:nth-child(n), .country-commitments th:nth-child(n), .country-indicators th:nth-child(n) { width: auto; }
+.commitment-progress th:nth-child(1), .commitment-progress th:nth-child(2), .commitment-progress th:nth-child(4),
+.commitment-milestones th:nth-child(2), .commitment-milestones th:nth-child(3), .commitment-milestones th:nth-child(4),
+.country-commitments th:nth-child(2), .country-commitments th:nth-child(3) { width: 1%; white-space: nowrap; }
+.commitment-progress td:nth-child(2), .commitment-milestones td:nth-child(3), .country-commitments td:nth-child(2) { white-space: nowrap; min-width: 9.5rem; }
+.commitment-progress td:nth-child(4) { min-width: 9rem; }
+.commitment-progress td:nth-child(3), .commitment-milestones td:nth-child(1) { min-width: 14rem; }
+td .status-badge { vertical-align: top; }
+/* Phones: the sort links in the hidden table heading are removed (the Sort by menu does the same job),
+   so keyboard focus can never land on something invisible. */
+@media (max-width: 47.99rem) {
+  .view-commitments thead, .view-countries thead { display: none; }
+}
+
+/* Indicator tables on the country page: units, years and numbers stay on one line;
+   the indicator name and its definition take the remaining width. */
+@media (min-width: 48rem) {
+  .country-indicators table { table-layout: auto; }
+  .country-indicators th:nth-child(1) { width: auto; }
+  .country-indicators th:nth-child(n+2), .country-indicators td:nth-child(n+2) { width: 1%; white-space: nowrap; }
+  .country-indicators td:nth-child(5), .country-indicators th:nth-child(5) { text-align: start; }
+  .country-indicators td:nth-child(1) { min-width: 18rem; }
+}
+.rtl-test-banner { margin: 0; padding: 0.5rem 1rem; background: #FFF7ED; border-bottom: 2px solid #B35C00; text-align: center; font-size: 0.875rem; }

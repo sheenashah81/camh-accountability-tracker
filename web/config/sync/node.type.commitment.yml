@@ -1,0 +1,11 @@
+uuid: 4cbe2229-8cf1-48b4-bcad-2579946759ed
+langcode: en
+status: true
+dependencies: {  }
+name: Commitment
+type: commitment
+description: 'A public commitment supported by a cited public document.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1870" viewBox="0 0 1280 1870"><rect width="1280" height="1870" fill="#FFFFFF"/><rect x="0" y="0" width="1280" height="64" rx="0" fill="#F7F8FA" stroke="none" stroke-width="1"/>
+<text x="90" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="start">Site name</text>
+<text x="640" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Home</text>
+<text x="710" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Commitments</text>
+<text x="860" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Countries</text>
+<text x="950" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Data</text>
+<text x="1050" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">English</text>
+<text x="1130" y="38" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Spanish</text>
+<rect x="0" y="64" width="1280" height="4" rx="0" fill="#1CABE2" stroke="none" stroke-width="1"/>
+<text x="90" y="100" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#0B6E99" text-anchor="start">Home</text>
+<line x1="90" y1="103" x2="122" y2="103" stroke="#0B6E99"/>
+<text x="90" y="150" font-family="Noto Sans, Arial, sans-serif" font-size="36" font-weight="700" fill="#1A1A1A" text-anchor="start">Country name (H1)</text>
+<text x="90" y="190" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Region:</text>
+<text x="170" y="190" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="90" y="250" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitments in this country</text>
+<text x="90" y="276" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Published commitments</text>
+<rect x="90" y="290" width="1100" height="40" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="102" y="316" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Commitment</text>
+<text x="762" y="316" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="960" y="316" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Last updated</text>
+<rect x="102" y="352" width="500" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="762" y="344" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#1B7F3B" stroke-width="2"/>
+<rect x="772" y="352" width="12" height="12" rx="6" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="792" y="363" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="960" y="364" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Date</text>
+<line x1="90" y1="386" x2="1190" y2="386" stroke="#D0D5DD"/>
+<rect x="102" y="408" width="500" height="12" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="762" y="400" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#1B7F3B" stroke-width="2"/>
+<rect x="772" y="408" width="12" height="12" rx="6" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+<text x="792" y="419" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Status</text>
+<text x="960" y="420" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Date</text>
+<line x1="90" y1="442" x2="1190" y2="442" stroke="#D0D5DD"/>
+<text x="102" y="462" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Empty state (shown instead of rows): No commitments have been published for this country yet.</text>
+<text x="90" y="530" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicators</text>
+<text x="90" y="556" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Latest available value for each indicator</text>
+<rect x="90" y="570" width="1100" height="40" rx="0" fill="#E8F6FC" stroke="none" stroke-width="1"/>
+<text x="102" y="596" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator</text>
+<text x="560" y="596" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Latest year</text>
+<text x="700" y="596" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Latest value</text>
+<text x="850" y="596" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Earliest in series</text>
+<text x="1048" y="596" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Unit</text>
+<text x="102" y="632" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name</text>
+<rect x="102" y="646" width="380" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="102" y="662" width="380" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="102" y="678" width="220" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<text x="560" y="632" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Year</text>
+<text x="700" y="632" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="850" y="632" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Year: value</text>
+<text x="1048" y="632" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Unit</text>
+<line x1="90" y1="714" x2="1190" y2="714" stroke="#D0D5DD"/>
+<text x="102" y="742" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name</text>
+<rect x="102" y="756" width="380" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="102" y="772" width="380" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="102" y="788" width="220" height="9" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<text x="560" y="742" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Year</text>
+<text x="700" y="742" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Value</text>
+<text x="850" y="742" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Year: value</text>
+<text x="1048" y="742" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#1A1A1A" text-anchor="start">Unit</text>
+<line x1="90" y1="824" x2="1190" y2="824" stroke="#D0D5DD"/>
+<text x="90" y="890" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Trends over time</text>
+<text x="90" y="934" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name (chart title)</text>
+<rect x="90" y="948" width="1100" height="220" rx="0" fill="#FFFFFF" stroke="#D0D5DD" stroke-width="1"/>
+<line x1="140" y1="968" x2="1160" y2="968" stroke="#E4E7EC"/>
+<line x1="140" y1="1008" x2="1160" y2="1008" stroke="#E4E7EC"/>
+<line x1="140" y1="1048" x2="1160" y2="1048" stroke="#E4E7EC"/>
+<line x1="140" y1="1088" x2="1160" y2="1088" stroke="#E4E7EC"/>
+<line x1="140" y1="1128" x2="1160" y2="1128" stroke="#E4E7EC"/>
+<polyline points="140,1114 220,1104 300,1099 380,1084 460,1089 540,1069 620,1054 700,1064 780,1039 860,1024 940,1014 1020,1004 1100,994" fill="none" stroke="#0B6E99" stroke-width="2"/>
+<text x="1100" y="968" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="700" fill="#595959" text-anchor="start">Latest</text>
+<text x="140" y="1160" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Year</text>
+<text x="1130" y="1160" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="end">Year</text>
+<rect x="90" y="1180" width="1100" height="40" rx="0" fill="#FFFFFF" stroke="#D0D5DD" stroke-width="1"/>
+<text x="104" y="1205" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#0B6E99" text-anchor="start">▸ Data table: indicator name (opens a text alternative to the chart)</text>
+<text x="90" y="1264" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name (chart title)</text>
+<rect x="90" y="1278" width="1100" height="220" rx="0" fill="#FFFFFF" stroke="#D0D5DD" stroke-width="1"/>
+<line x1="140" y1="1298" x2="1160" y2="1298" stroke="#E4E7EC"/>
+<line x1="140" y1="1338" x2="1160" y2="1338" stroke="#E4E7EC"/>
+<line x1="140" y1="1378" x2="1160" y2="1378" stroke="#E4E7EC"/>
+<line x1="140" y1="1418" x2="1160" y2="1418" stroke="#E4E7EC"/>
+<line x1="140" y1="1458" x2="1160" y2="1458" stroke="#E4E7EC"/>
+<polyline points="140,1444.0 220,1448.0 300,1456.0 380,1420.0 460,1436.0 540,1432.0 620,1396.0 700,1416.0 780,1408.0 860,1372.0 940,1376.0 1020,1380.0 1100,1348.0" fill="none" stroke="#0B6E99" stroke-width="2"/>
+<text x="1100" y="1298" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="700" fill="#595959" text-anchor="start">Latest</text>
+<text x="140" y="1490" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Year</text>
+<text x="1130" y="1490" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="end">Year</text>
+<rect x="90" y="1510" width="1100" height="40" rx="0" fill="#FFFFFF" stroke="#D0D5DD" stroke-width="1"/>
+<text x="104" y="1535" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#0B6E99" text-anchor="start">▸ Data table: indicator name (opens a text alternative to the chart)</text>
+<text x="90" y="1610" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Data sources</text>
+<text x="90" y="1656" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name</text>
+<rect x="420" y="1644" width="700" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="420" y="1662" width="420" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<line x1="90" y1="1682" x2="1190" y2="1682" stroke="#D0D5DD"/>
+<text x="90" y="1716" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="start">Indicator name</text>
+<rect x="420" y="1704" width="700" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<rect x="420" y="1722" width="420" height="10" rx="3" fill="#E4E7EC" stroke="none" stroke-width="1"/>
+<line x1="90" y1="1742" x2="1190" y2="1742" stroke="#D0D5DD"/>
+<rect x="0" y="1780" width="1280" height="90" rx="0" fill="#F7F8FA" stroke="#D0D5DD" stroke-width="1"/>
+<text x="90" y="1814" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="start">Footer: independent-prototype disclaimer (no affiliation with UNICEF, WHO, DevInfo, DHIS2 or any government)</text>
+<text x="90" y="1838" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#1A1A1A" text-anchor="start">Draft-record and Spanish-text notices</text></svg>

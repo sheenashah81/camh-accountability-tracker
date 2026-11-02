@@ -1,0 +1,19 @@
+uuid: 150ec733-5218-4b84-ad55-960e59773f7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_name
+    - node.type.indicator_value
+id: node.indicator_value.field_source_name
+field_name: field_source_name
+entity_type: node
+bundle: indicator_value
+label: 'Source name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+# Behat: scripted user journeys against a running site.
+# Run from the web/ folder:  ddev exec vendor/bin/behat --config /var/www/tests/behat/behat.yml
+default:
+  autoload:
+    '': '%paths.base%/bootstrap'
+  suites:
+    default:
+      paths:
+        - '%paths.base%/features'
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+  extensions:
+    Drupal\MinkExtension:
+      browserkit_http: ~
+      base_url: http://localhost
+      files_path: '%paths.base%/fixtures'
+      default_session: browserkit_http
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: drupal
+      drupal:
+        drupal_root: /var/www/html/web

@@ -1,0 +1,79 @@
+camh_tracker.overview:
+  path: '/tracker'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\OverviewController::build'
+    _title: 'Overview'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.data:
+  path: '/tracker/data'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataController::page'
+    _title: 'Data'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.data_commitments_csv:
+  path: '/tracker/data/commitments.csv'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataController::commitments'
+    format: 'csv'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.data_commitments_json:
+  path: '/tracker/data/commitments.json'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataController::commitments'
+    format: 'json'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.data_values_csv:
+  path: '/tracker/data/indicator-values.csv'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataController::indicatorValues'
+    format: 'csv'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.data_values_json:
+  path: '/tracker/data/indicator-values.json'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataController::indicatorValues'
+    format: 'json'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.indicators:
+  path: '/tracker/indicators'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\IndicatorsController::build'
+    _title: 'Indicators'
+  requirements:
+    _permission: 'access content'
+
+camh_tracker.import_commitments:
+  path: '/admin/content/import-commitments'
+  defaults:
+    _form: '\Drupal\camh_tracker\Form\CommitmentImportForm'
+    _title: 'Import commitments (CSV)'
+  requirements:
+    _permission: 'import commitments csv'
+
+camh_tracker.data_quality:
+  path: '/admin/reports/data-quality'
+  defaults:
+    _controller: '\Drupal\camh_tracker\Controller\DataQualityController::build'
+    _title: 'Data-quality report'
+  requirements:
+    _permission: 'view data quality report'
+
+camh_tracker.import_indicator_values:
+  path: '/admin/content/import-indicator-values'
+  defaults:
+    _form: '\Drupal\camh_tracker\Form\IndicatorValueImportForm'
+    _title: 'Import indicator values (CSV)'
+  requirements:
+    _permission: 'import indicator values csv'

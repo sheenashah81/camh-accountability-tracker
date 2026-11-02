@@ -1,0 +1,22 @@
+uuid: 452f2007-808a-4618-bae9-4c539ccddf04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.country
+  module:
+    - text
+id: node.country.field_summary
+field_name: field_summary
+entity_type: node
+bundle: country
+label: Summary
+description: 'Plain-language profile introduction.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

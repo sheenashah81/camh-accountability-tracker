@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720"><rect width="1280" height="720" fill="#FFFFFF"/><text x="40" y="48" font-family="Noto Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="start">Information architecture: sitemap of the built site</text>
+<text x="40" y="74" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Solid blue boxes are built and tested. Dashed boxes are roadmap. Source: docs/information-architecture.md and the built menu.</text>
+<rect x="40" y="96" width="150" height="34" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="115.0" y="118.0" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Built</text>
+<rect x="204" y="96" width="150" height="34" rx="6" fill="#FFFFFF" stroke="#595959" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="279.0" y="118.0" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#595959" text-anchor="middle">Roadmap</text>
+<rect x="368" y="96" width="190" height="34" rx="6" fill="#F7F8FA" stroke="#475467" stroke-width="2"/>
+<text x="463.0" y="118.0" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Signed in (Drupal)</text>
+<rect x="540" y="160" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="640.0" y="184" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Home (overview)</text>
+<text x="640.0" y="204" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">/en  /es</text>
+<path d="M640 212 L640 246.0 L220 246.0 L220 280" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="120" y="280" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="220.0" y="304" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Commitments</text>
+<text x="220.0" y="324" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">list, filters, map toggle</text>
+<path d="M640 212 L640 246.0 L440 246.0 L440 280" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="340" y="280" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="440.0" y="304" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Indicators</text>
+<text x="440.0" y="324" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">bar charts + tables</text>
+<path d="M640 212 L640 246.0 L660 246.0 L660 280" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="560" y="280" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="660.0" y="304" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Countries</text>
+<text x="660.0" y="324" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">list + 8 profiles</text>
+<path d="M640 212 L640 246.0 L880 246.0 L880 280" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="780" y="280" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="880.0" y="304" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Data</text>
+<text x="880.0" y="324" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">CSV and JSON downloads</text>
+<path d="M640 212 L640 246.0 L1120 246.0 L1120 280" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="1020" y="280" width="200" height="52" rx="6" fill="#FFFFFF" stroke="#595959" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1120.0" y="304" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#595959" text-anchor="middle">About / Resources</text>
+<text x="1120.0" y="324" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">not yet built</text>
+<rect x="120" y="380" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="220.0" y="404" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Commitment detail</text>
+<text x="220.0" y="424" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">status, milestones, sources</text>
+<path d="M220 332 L220 356.0 L220 356.0 L220 380" fill="none" stroke="#595959" stroke-width="1.5"/>
+<rect x="560" y="380" width="200" height="52" rx="6" fill="#E8F6FC" stroke="#0B6E99" stroke-width="2"/>
+<text x="660.0" y="404" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#00577D" text-anchor="middle">Country profile</text>
+<text x="660.0" y="424" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">indicators, commitments, charts</text>
+<path d="M660 332 L660 356.0 L660 356.0 L660 380" fill="none" stroke="#595959" stroke-width="1.5"/>
+<line x1="130" y1="458" x2="1150" y2="458" stroke="#D0D5DD"/>
+<text x="40" y="486" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Footer on every page: independent-project disclaimer, data sources. Language switcher EN / ES in the header. Right-to-left layout test at /ar (hidden).</text>
+<text x="40" y="540" font-family="Noto Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A" text-anchor="start">Signed-in side (Drupal admin, not in the public menu)</text>
+<rect x="40" y="560" width="260" height="52" rx="6" fill="#F7F8FA" stroke="#475467" stroke-width="2"/>
+<text x="170.0" y="584" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Contributor</text>
+<text x="170.0" y="604" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Add commitment; submit for review</text>
+<rect x="340" y="560" width="260" height="52" rx="6" fill="#F7F8FA" stroke="#475467" stroke-width="2"/>
+<text x="470.0" y="584" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Editor</text>
+<text x="470.0" y="604" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Review, verify, publish or reject</text>
+<rect x="640" y="560" width="260" height="52" rx="6" fill="#F7F8FA" stroke="#475467" stroke-width="2"/>
+<text x="770.0" y="584" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A" text-anchor="middle">Moderation states</text>
+<text x="770.0" y="604" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">Draft, In review, Published, Rejected</text>
+<rect x="940" y="560" width="300" height="52" rx="6" fill="#FFFFFF" stroke="#595959" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1090.0" y="584" font-family="Noto Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#595959" text-anchor="middle">Review queue screen</text>
+<text x="1090.0" y="604" font-family="Noto Sans, Arial, sans-serif" font-size="12" font-weight="400" fill="#595959" text-anchor="middle">designed; build uses the content list</text>
+<text x="40" y="660" font-family="Noto Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#595959" text-anchor="start">Public pages show Published records only. Drafts are never exported.</text>
+<text x="40" y="684" font-family="Noto Sans, Arial, sans-serif" font-size="13" font-weight="400" fill="#595959" text-anchor="start">Language: English and Spanish (Spanish AI-assisted, human-reviewed 2026-11-01). Independent portfolio project; not affiliated with UNICEF or WHO.</text></svg>

@@ -1,0 +1,19 @@
+uuid: 4be08049-40f9-428b-a7d3-5b80e5954686
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_term_code
+    - taxonomy.vocabulary.indicator_direction
+id: taxonomy_term.indicator_direction.field_term_code
+field_name: field_term_code
+entity_type: taxonomy_term
+bundle: indicator_direction
+label: 'Term code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,13 @@
+services:
+  camh_tracker.root_redirect:
+    class: Drupal\camh_tracker\EventSubscriber\RootRedirectSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  camh_tracker.commitment_csv_importer:
+    class: Drupal\camh_tracker\Service\CommitmentCsvImporter
+    arguments: ['@entity_type.manager']
+
+  camh_tracker.indicator_value_csv_importer:
+    class: Drupal\camh_tracker\Service\IndicatorValueCsvImporter
+    arguments: ['@entity_type.manager']

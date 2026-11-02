@@ -1,0 +1,19 @@
+uuid: 6780ef17-3e8f-40a1-b01e-a021f4cd6721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_term_code
+    - taxonomy.vocabulary.region
+id: taxonomy_term.region.field_term_code
+field_name: field_term_code
+entity_type: taxonomy_term
+bundle: region
+label: 'Term code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

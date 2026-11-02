@@ -1,0 +1,16 @@
+uuid: df3515a9-b8dd-4ebb-ad8f-9c758e5791eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.institution
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.institution
+target_entity_type_id: node
+target_bundle: institution
+default_langcode: en
+language_alterable: false

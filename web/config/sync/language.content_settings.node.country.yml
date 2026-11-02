@@ -1,0 +1,16 @@
+uuid: ca41726b-95a2-4aef-bb75-3c530a8e4bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.country
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.country
+target_entity_type_id: node
+target_bundle: country
+default_langcode: en
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: ecbfe3a9-c458-4c42-bbae-92e58ec6a900
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unit
+    - node.type.indicator
+id: node.indicator.field_unit
+field_name: field_unit
+entity_type: node
+bundle: indicator
+label: Unit
+description: 'For example per 100,000 or % of adolescents.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

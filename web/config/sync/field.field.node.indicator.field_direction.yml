@@ -1,0 +1,24 @@
+uuid: 9af529b4-d2ef-4453-a78b-7e59d4fcd74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direction
+    - node.type.indicator
+    - taxonomy.vocabulary.indicator_direction
+id: node.indicator.field_direction
+field_name: field_direction
+entity_type: node
+bundle: indicator
+label: Direction
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      indicator_direction: indicator_direction
+field_type: entity_reference

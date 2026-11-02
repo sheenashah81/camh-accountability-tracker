@@ -1,0 +1,19 @@
+uuid: 94689f9b-f97f-45ed-b0b3-e9dd6c8f057a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code
+    - node.type.indicator
+id: node.indicator.field_code
+field_name: field_code
+entity_type: node
+bundle: indicator
+label: 'Indicator code'
+description: "The source's own code. Must be unique."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

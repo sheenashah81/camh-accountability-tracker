@@ -1,0 +1,32 @@
+uuid: 75143f61-1e67-4cf1-9354-02a75eccb2d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.commitment_type.field_term_code
+    - taxonomy.vocabulary.commitment_type
+  module:
+    - text
+id: taxonomy_term.commitment_type.default
+targetEntityType: taxonomy_term
+bundle: commitment_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_term_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  langcode: true

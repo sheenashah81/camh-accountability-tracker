@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for camh_theme theme.
+ */
+
+/**
+ * Adding Website container type configuration to configuration.
+ */
+function camh_theme_update_8100() {
+  \Drupal::configFactory()
+    ->getEditable('camh_theme.settings')
+    ->set('b5_top_container_config', '')
+    ->save(TRUE);
+}
+
+/**
+ * Adding CKEditor configurable CSS styling.
+ */
+function camh_theme_update_8101() {
+  \Drupal::configFactory()
+    ->getEditable('camh_theme.settings')
+    ->set('b5_ckeditor_enable', TRUE)
+    ->save(TRUE);
+}

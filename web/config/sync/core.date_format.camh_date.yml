@@ -1,0 +1,8 @@
+uuid: 6c523e87-91a3-4053-ac5f-45512170b079
+langcode: en
+status: true
+dependencies: {  }
+id: camh_date
+label: 'Tracker date (1 July 2025)'
+locked: false
+pattern: 'j F Y'

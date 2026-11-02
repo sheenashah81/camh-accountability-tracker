@@ -1,0 +1,24 @@
+uuid: 2c485749-ba05-4bca-bccf-087e200f03b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.country
+    - node.type.institution
+id: node.institution.field_country
+field_name: field_country
+entity_type: node
+bundle: institution
+label: Country
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      country: country
+field_type: entity_reference

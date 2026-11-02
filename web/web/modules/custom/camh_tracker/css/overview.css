@@ -1,0 +1,27 @@
+h1.page-title, .page-title { margin-top: 1.25rem; }
+.overview-intro { font-size: 1.125rem; max-width: 52rem; margin-bottom: 1.5rem; }
+.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.kpi-tile { background: #E8F6FC; border: 1px solid #D0D5DD; border-top: 4px solid #1CABE2; border-radius: 8px; padding: 1rem 1.25rem; }
+.kpi-tile p { margin: 0; }
+.kpi-tile__label { font-weight: 600; font-size: 0.875rem; color: #1A1A1A; }
+.kpi-tile__value { font-size: 2.25rem; line-height: 2.75rem; font-weight: 700; color: #00577D; font-variant-numeric: tabular-nums; }
+.kpi-tile__note { font-size: 0.875rem; line-height: 1.25rem; color: #595959; }
+.overview-map-section h2, .overview-countries h2, .overview-progress h2, .overview-recent h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+.overview-map { width: 100%; height: 34rem; background: #F4FAFD; border: 1px solid #D0D5DD; border-radius: 8px; overflow: hidden; }
+.map-legend { list-style: none; padding: 0; margin: 0 0 0.75rem; display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.875rem; }
+.map-legend .swatch { display: inline-block; width: 1rem; height: 1rem; border: 1px solid #1A1A1A; border-radius: 3px; vertical-align: -0.15em; margin-inline-end: 0.35rem; }
+.swatch--published { background: #0B6E99; border-radius: 50%; width: 1.25rem; height: 1.25rem; }
+.swatch--tracked { background: #8CCBEA; border-radius: 50%; }
+.swatch--other { background: #D9DDE3; border-color: #D0D5DD; border-radius: 2px; }
+.status-bar { display: inline-block; width: 8rem; height: 0.75rem; background: #E8F6FC; border-radius: 6px; vertical-align: middle; overflow: hidden; }
+.status-bar span { display: block; height: 100%; background: #0B6E99; }
+.overview-progress table { max-width: 32rem; }
+.overview-recent td:nth-child(1) { white-space: nowrap; }
+@media (max-width: 47.99rem) {
+  .overview-map { height: 22rem; }
+  .overview-countries tr, .overview-progress tr, .overview-recent tr { display: block; border-bottom: 2px solid #D0D5DD; padding: 0.75rem 0; }
+  .overview-countries thead, .overview-progress thead, .overview-recent thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .overview-countries td, .overview-progress td, .overview-recent td { display: block; border: 0; padding: 0.25rem 0; white-space: normal !important; }
+  .overview-countries td::before, .overview-progress td::before, .overview-recent td::before { content: attr(data-label); display: block; font-size: 0.875rem; font-weight: 600; color: #595959; }
+  .overview-countries td:first-child::before { display: none; }
+}

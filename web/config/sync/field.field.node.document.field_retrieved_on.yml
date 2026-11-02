@@ -1,0 +1,21 @@
+uuid: 8cc0b24d-ed3d-4924-b962-16ef227181ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_retrieved_on
+    - node.type.document
+  module:
+    - datetime
+id: node.document.field_retrieved_on
+field_name: field_retrieved_on
+entity_type: node
+bundle: document
+label: 'Retrieved on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

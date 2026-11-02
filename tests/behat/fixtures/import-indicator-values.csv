@@ -1,0 +1,5 @@
+indicator_code,country_iso3,year,value,sex,notes,source_name,source_url,licence,retrieved_on,is_illustrative
+SH.STA.SUIC.P5,KEN,2022,5.5,Total,Behat test row,Behat test source,https://data.worldbank.org/indicator/SH.STA.SUIC.P5,CC BY 4.0,2026-10-26,true
+SH.STA.SUIC.P5,KEN,2021,5.5,Total,Existing year so skipped,Behat test source,https://data.worldbank.org/indicator/SH.STA.SUIC.P5,CC BY 4.0,2026-10-26,false
+SH.STA.SUIC.P5,NGA,2022,5.5,Total,Licence not checked,Behat test source,https://data.worldbank.org/indicator/SH.STA.SUIC.P5,Not yet checked,2026-10-26,false
+XX.NOT.REAL,NGA,2022,5.5,Total,Unknown indicator,Behat test source,https://example.org,CC BY 4.0,2026-10-26,false

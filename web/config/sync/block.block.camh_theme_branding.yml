@@ -1,0 +1,23 @@
+uuid: 7deb65c3-213b-454f-98ff-4be3ab837c2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camh_theme
+id: camh_theme_branding
+theme: camh_theme
+region: nav_branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: Branding
+  label_display: ''
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
