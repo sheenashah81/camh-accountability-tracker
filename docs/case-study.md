@@ -37,9 +37,9 @@ Twelve defects were found by screenshots, automated checks and CI, and fixed (`e
 ## Scope and roadmap
 | Built and tested | Simulated by design | Roadmap |
 |---|---|---|
-| Site, workflow, validation, pages, charts, map, downloads, bilingual interface, CSV import for commitments and indicator values, tests, CI | DevInfo and DHIS2 integration are designed and documented (`docs/integrations-and-power-bi.md`), not connected to production systems | High-fidelity Figma screens and clickable prototype; native-speaker review of the Spanish text; evidence-based status for the Colombia record; screen-reader walkthrough in depth; putting the hosting plan (`docs/hosting.md`) into practice |
+| Site, workflow, validation, pages, charts, map, downloads, bilingual interface, CSV import for commitments and indicator values, tests, CI | DevInfo and DHIS2 integration are designed and documented (`docs/integrations-and-power-bi.md`), not connected to production systems | Native-speaker review of the Spanish text; evidence-based status for the Colombia record; screen-reader walkthrough in depth; putting the hosting plan (`docs/hosting.md`) into practice |
 
-Design: the Figma file holds the foundations (colour and text styles), three components (button, status badge, text input), a low-fidelity Overview wireframe (desktop and mobile) with reusable header and footer, and a Commitments list wireframe. Remaining wireframes, high-fidelity screens and the prototype are the current design work (`docs/open-items.md`).
+Design: the Figma file holds the foundations (colour and text styles), reusable components (primary and secondary button, link, status badge, text input, header and footer), a sitemap and three user journeys, low-fidelity wireframes for the main screens (including the contributor form, admin review queue and open mobile menu), reference captures of the built site at desktop, tablet and phone widths, a 13-link clickable prototype, and handover notes (`design/handover.md`). Tablet layouts are captured as reference images, not editable frames.
 
 ## Where to look
 | To see | Open |

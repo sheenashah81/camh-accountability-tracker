@@ -8,7 +8,7 @@
 A portfolio project covering the full workflow of designing and developing a public accountability tracker: Figma design, a Drupal 11 website and admin backend, an interactive dashboard, data import and validation, accessibility, multilingual support, automated testing and documentation.
 
 ## Read this first
-The [case study](docs/case-study.md) summarises the problem, what was built, the decisions made, what testing found, and what is real and simulated, and the roadmap.
+The [portfolio summary](docs/portfolio-summary.md) is a two-minute overview. The [case study](docs/case-study.md) summarises the problem, what was built, the decisions made, what testing found, and what is real and simulated, and the roadmap.
 
 ## Run it
 Requires Docker and [DDEV](https://ddev.com). The DDEV project lives in `web/`. The exact sequence for a clean rebuild (start DDEV, `composer install`, install a blank Drupal site, import `web/config/sync`, load the Spanish strings and the CSV data with the scripts in `web/scripts`) is the workflow in `.github/workflows/ci.yml`, explained in `docs/ci.md`. The site then runs at https://camh-tracker.ddev.site.
