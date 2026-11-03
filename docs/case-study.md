@@ -13,7 +13,7 @@ A working Drupal 11 site (run locally with DDEV) with:
 - **Public pages:** Overview (KPI tiles, vector map with a table alternative, progress by status), Commitments (search, filters, chips, table or map), commitment detail (history, milestones, source and licence panel), Country profiles with indicator charts, Indicators, and a Data page with CSV and JSON downloads.
 - **Admin tools:** CSV import forms for commitments and indicator values that check a file row by row (commitments load as Drafts, values load unpublished), and a read-only JSON:API.
 - **Languages:** English, Spanish (AI-assisted and given a first review by a person on 2026-11-01; it has not been reviewed by a native or professional Spanish speaker, which is required before any real-world use; new Spanish text is labelled "pending human review" until checked), and a right-to-left layout test.
-- **Quality gates on every push** (GitHub Actions rebuilds the site from exported configuration and CSV on a clean machine): data checks, 11 validation tests, 28 Behat user journeys, and an axe-core accessibility check across 63 page, language and size combinations.
+- **Quality gates on every push** (GitHub Actions rebuilds the site from exported configuration and CSV on a clean machine): data checks, 11 validation tests, 34 Behat user journeys, and an axe-core accessibility check across 63 page, language and size combinations.
 
 | Overview | Commitments list |
 |---|---|

@@ -13,7 +13,7 @@ I designed and built, end to end, a public tracker of government commitments on 
 | **Data and integrations** | Real countries and indicators, each with a citation, source link, licence check and retrieved-on date. CSV import with row-level error checks, a read-only JSON:API, and CSV and JSON downloads. DevInfo and DHIS2 integration is designed and documented, not connected (`docs/integrations-and-power-bi.md`). |
 | **Accessibility** | Status badges with icons and text, data tables behind every chart, reduced-motion support, keyboard focus checks, and tables that stack as cards on phones. An axe-core check passes across 63 page, language and size combinations. Lighthouse (2026-11-01) scored accessibility 100, best practices 100 and SEO 100. |
 | **Multilingual and right-to-left** | English and Spanish interfaces and content, plus a right-to-left layout test. The Spanish is AI-assisted and has had a first review by a person; it has not been reviewed by a native or professional Spanish speaker, which would be required before real-world use. |
-| **Testing and delivery** | Data checks, 11 validation tests, 28 Behat user journeys and the accessibility check run in GitHub Actions on a clean machine. Twelve defects found by testing are logged with their fixes (`evidence/bug-log.md`). |
+| **Testing and delivery** | Data checks, 11 validation tests, 34 Behat user journeys and the accessibility check run in GitHub Actions on a clean machine. Twelve defects found by testing are logged with their fixes (`evidence/bug-log.md`). |
 | **Documentation and handover** | Requirements traceability matrix, architecture, admin guide, editor training guide, hosting plan, maintenance log and a roadmap of open items. |
 
 ## Decisions worth a conversation
