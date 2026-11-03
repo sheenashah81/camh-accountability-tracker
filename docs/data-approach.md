@@ -22,7 +22,7 @@ Decided 2026-10-21 (supersedes the earlier "fully synthetic" assumption in the p
 | Europe | United Kingdom | High-income comparator |
 
 ## Languages
-English (reviewed by the author) and Spanish (AI-assisted and reviewed by a person on 2026-11-01; any new Spanish text is labelled "pending human review" until a person checks it). A right-to-left placeholder layout is used to test layout direction handling; it does not by itself prove the whole architecture.
+English (reviewed by the author) and Spanish (AI-assisted and given a first review by a person on 2026-11-01, not yet by a native or professional Spanish speaker, which is required before real-world use; any new Spanish text is labelled "pending human review" until a person checks it). A right-to-left placeholder layout is used to test layout direction handling; it does not by itself prove the whole architecture.
 
 ## Open items
 - Confirm remaining licences (see rule 5 and `data/indicator-shortlist.md`).

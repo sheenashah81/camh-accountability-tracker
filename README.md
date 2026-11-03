@@ -25,7 +25,7 @@ A working prototype: Drupal 11 site with a content model, review workflow and va
 | `design/` | Figma links, exports, design tokens, handover spec |
 | `data/` | Public datasets (cited), illustrative records and data dictionary |
 | `web/` | Drupal project, configuration, custom theme and module |
-| `dashboard/` | Dashboard front-end source |
+| `web/web/modules/custom/camh_tracker/js/` | Dashboard front-end source (ECharts charts and map), served by the Drupal module |
 | `tests/` | Behat, PHPUnit and accessibility tests |
 | `evidence/` | Screenshots, reports, bug log |
 
